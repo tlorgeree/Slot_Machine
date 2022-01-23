@@ -1,15 +1,19 @@
 /// @desc
-depth--;
+depth = 1;
 
 #region Slot Reels
 slots = [-1,-1,-1]; //Holds ID values for each reel
 reel_num = 3; //number of reels in game
+symbol_num = 3;
 reels[0] = [1,0,1]; //reels[] stores the symbol data for each reel
 reels[1] = [0,1,0];
 reels[2] = [1,0,1];
 reels_spun[0] = reels[0]; //This is the resulting output from a spin
 reels_spun[1] = reels[1];
 reels_spun[2] = reels[2];
+last_spin[0] = reels[0]; //This is the resulting output from a spin
+last_spin[1] = reels[1];
+last_spin[2] = reels[2];
 #endregion
 
 #region Slot Controller Variables
@@ -29,6 +33,9 @@ spin_anim = false; //Is the machine currently animating the spin
 #region Animation Variables
 anim_timer = 0; //alarm
 anim_ind = 0;	//incrementer
+spin_timer = [0,0,0]; //how long each reel spins
+spin_spd = [8,16,24]; // how fast reels spin
+displacement = [0,0,0];
 #endregion
 
 #region Message Variables

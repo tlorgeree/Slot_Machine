@@ -14,7 +14,7 @@ if !global.gamepaused{
 		for (var i= 0; i<reel_num; ++i){//increment each reel randomly
 			spin_inc[i] = irandom(array_length(reels[i])-1);
 		}
-	
+		last_spin = reels_spun;//store last spin for animation
 		for(var j = 0; j<reel_num;++j){
 			var _reel_len = array_length(reels[j]);
 			for(var k = 0; k < _reel_len; ++k){
@@ -23,8 +23,8 @@ if !global.gamepaused{
 				reels_spun[j][k] = reels[j][_index];
 			}
 		}
-		//spin_anim = true;
-		//alarm[0] = 60;
+		spin_anim = true;
+		spin_timer = [60+irandom(15), 90 + irandom(15), 120 + irandom(15)];
 		spin_state = false;
 	}
 
