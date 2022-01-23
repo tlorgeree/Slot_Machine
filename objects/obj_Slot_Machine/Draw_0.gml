@@ -1,5 +1,4 @@
 /// @desc
-
 for (var i = 0; i<reel_num;++i){
 	var _reel_len = array_length(reels[i]);
 	
@@ -31,3 +30,48 @@ if (no_money){
 draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
+
+if (pay_anim){
+	//show_debug_message(string(anim_ind<array_length(payout)))
+	if (anim_ind<array_length(payout)){
+		draw_set_alpha(anim_timer/60);
+		switch (payout[anim_ind,0]){
+			case 1: Draw_Slot_Position(spr_Highlight_Green,0,0,1);
+					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
+					Draw_Slot_Position(spr_Highlight_Green,0,2,1);
+					break;
+			case 2: Draw_Slot_Position(spr_Highlight_Green,0,0,0);
+					Draw_Slot_Position(spr_Highlight_Green,0,1,0);
+					Draw_Slot_Position(spr_Highlight_Green,0,2,0);
+					break;
+			case 3: Draw_Slot_Position(spr_Highlight_Green,0,0,2);
+					Draw_Slot_Position(spr_Highlight_Green,0,1,2);
+					Draw_Slot_Position(spr_Highlight_Green,0,2,2);
+					break;
+			case 4: Draw_Slot_Position(spr_Highlight_Green,0,0,0);
+					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
+					Draw_Slot_Position(spr_Highlight_Green,0,2,2);
+					break;		
+			case 5: Draw_Slot_Position(spr_Highlight_Green,0,0,2);
+					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
+					Draw_Slot_Position(spr_Highlight_Green,0,2,0);
+					break;		
+		}
+		anim_timer--;
+		if (anim_timer<=0){ 
+			anim_ind++;
+			//anim_timer = 60;
+			global.money += 1000;
+		}
+	}
+	else{
+		pay_anim = false;
+		calc_done = true;
+		spin_anim = false;
+		payout = [];
+		anim_timer = 0;
+		anim_ind = 0;
+	}
+}
+draw_set_alpha(1);
+show_debug_message(string(payout));
