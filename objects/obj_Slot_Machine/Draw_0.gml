@@ -43,18 +43,13 @@ if (pay_anim) && (!spin_anim){
 			anim_ind++;
 			anim_timer = 60;
 			global.money += 1000;
+			
 		}
-	}
-	else{ //if no more rows, complete payout segment and reset variables
-		pay_anim = false;
-		spin_anim = false;
-		payout = [];
-		anim_timer = 0;
-		anim_ind = 0;
-	}
+	}else Reset_Slot_State();
+	
 }
+
 draw_set_alpha(1);
-show_debug_message(string(payout));
 
 #region Messages
 if (no_money){ //Tell player they can't afford the action
@@ -84,10 +79,7 @@ if (spin_anim){
 				if (j + _inc >= _reel_len) _inc = -j;
 				var _index = j + _inc;
 				last_spin[i][j] = last_spin[i][_index];
-			}
-			
-			
-			
+			}	
 		}
 		else{ 
 			var _symbol;
@@ -122,8 +114,9 @@ if (spin_anim){
 	if (spin_timer[0] == 0 && spin_timer[0]==spin_timer[1]
 		&& spin_timer[0]==spin_timer[2]){
 		spin_anim = false;
-		}
-	show_debug_message(string(spin_timer));
+		if !pay_anim Reset_Slot_State();//reset vars if no payout
+	}
 }
+draw_self();//draw the board sprite to cover up the others
 
 #endregion

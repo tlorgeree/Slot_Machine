@@ -18,7 +18,9 @@ last_spin[2] = reels[2];
 
 #region Slot Controller Variables
 spin_cost = 100; //Cost of 1 spin
-active = 1; //#active rows
+active = [0,0,0,0,0]; //#active rows
+active_total = 0;//for slot cost calc
+active_calc = 0;//recalculate active slots
 setup = true; //Can the player set up the next spin
 calc_done = true; //Has the machine finished its precious calc
 payout = [];//payouts will take the form of [active row, payout type]
