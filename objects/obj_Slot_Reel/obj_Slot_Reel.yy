@@ -29,8 +29,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Main_Slot",
+    "path": "folders/Objects/Main_Slot.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_Slot_Reel",
