@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Dungeon_Board",
+    "path": "sprites/spr_Dungeon_Board/spr_Dungeon_Board.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -15,7 +15,7 @@
     {"id":{"name":"spr_Title","path":"sprites/spr_Title/spr_Title.yy",},"order":5,},
     {"id":{"name":"obj_Arrow","path":"objects/obj_Arrow/obj_Arrow.yy",},"order":2,},
     {"id":{"name":"spr_Slot_Money","path":"sprites/spr_Slot_Money/spr_Slot_Money.yy",},"order":0,},
-    {"id":{"name":"spr_Main_Board11","path":"sprites/spr_Main_Board11/spr_Main_Board11.yy",},"order":7,},
+    {"id":{"name":"spr_Dungeon_Board","path":"sprites/spr_Dungeon_Board/spr_Dungeon_Board.yy",},"order":7,},
     {"id":{"name":"spr_Arror","path":"sprites/spr_Arror/spr_Arror.yy",},"order":2,},
     {"id":{"name":"obj_Slot_Machine","path":"objects/obj_Slot_Machine/obj_Slot_Machine.yy",},"order":1,},
     {"id":{"name":"spr_Slot_Boarder","path":"sprites/spr_Slot_Boarder/spr_Slot_Boarder.yy",},"order":6,},
