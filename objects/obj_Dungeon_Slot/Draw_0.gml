@@ -1,11 +1,13 @@
+/// @desc
 for (var i = 0; i<reel_num;++i){
 	
 	for (var j = 0; j<symbol_num;++j){
 		var _symbol;
 		
 		switch (reels_spun[i][j]) {
-			case SYMBOL.BLANK: _symbol = spr_Slot_Blank;  break;
-			case SYMBOL.MONEY: _symbol = spr_Slot_Money; break;
+			case DUN_SYMBOL.GREY: _symbol = spr_Room_Base;  break;
+			case DUN_SYMBOL.RED: _symbol = spr_Room_Red;  break;
+			case DUN_SYMBOL.BLUE: _symbol = spr_Room_Blue;  break;
 		}
 		Draw_Slot_Position(_symbol, 0, i, j);
 	}
@@ -14,35 +16,40 @@ for (var i = 0; i<reel_num;++i){
 
 if (pay_anim) && (!spin_anim){
 	if (anim_ind<array_length(payout)){//if there are payouts, animate
-		draw_set_alpha(anim_timer/60); //flash effect
+		draw_set_alpha(anim_timer/60); //flash effec
+		var _highlight = spr_Highlight_Yellow;
 		switch (payout[anim_ind,0]){ //controller for each row
-			case 1: Draw_Slot_Position(spr_Highlight_Green,0,0,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,1);
+			case 1: Draw_Slot_Position(_highlight,0,0,1);
+					Draw_Slot_Position(_highlight,0,1,1);
+					Draw_Slot_Position(_highlight,0,2,1);
+					global.Dungeon = [reels_spun[0,1],reels_spun[1,1],reels_spun[2,1]];
 					break;
-			case 2: Draw_Slot_Position(spr_Highlight_Green,0,0,0);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,0);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,0);
+			case 2: Draw_Slot_Position(_highlight,0,0,0);
+					Draw_Slot_Position(_highlight,0,1,0);
+					Draw_Slot_Position(_highlight,0,2,0);
+					global.Dungeon = [reels_spun[0,0],reels_spun[1,0],reels_spun[2,0]];
 					break;
-			case 3: Draw_Slot_Position(spr_Highlight_Green,0,0,2);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,2);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,2);
+			case 3: Draw_Slot_Position(_highlight,0,0,2);
+					Draw_Slot_Position(_highlight,0,1,2);
+					Draw_Slot_Position(_highlight,0,2,2);
+					global.Dungeon = [reels_spun[0,2],reels_spun[1,2],reels_spun[2,2]];
 					break;
-			case 4: Draw_Slot_Position(spr_Highlight_Green,0,0,0);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,2);
+			case 4: Draw_Slot_Position(_highlight,0,0,0);
+					Draw_Slot_Position(_highlight,0,1,1);
+					Draw_Slot_Position(_highlight,0,2,2);
+					global.Dungeon = [reels_spun[0,0],reels_spun[1,1],reels_spun[2,2]];
 					break;		
-			case 5: Draw_Slot_Position(spr_Highlight_Green,0,0,2);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,0);
+			case 5: Draw_Slot_Position(_highlight,0,0,2);
+					Draw_Slot_Position(_highlight,0,1,1);
+					Draw_Slot_Position(_highlight,0,2,0);
+					global.Dungeon = [reels_spun[0,2],reels_spun[1,1],reels_spun[2,0]];
 					break;		
 		}
 		if (!global.gamepaused) anim_timer--; //pause animation with pause
 		if (anim_timer<=0){ //if done animating, check next row
 			anim_ind++;
 			anim_timer = 60;
-			global.money += 1000;
-			
+			global.dungeon_calc = true;
 		}
 	}else Reset_Slot_State();
 	
@@ -86,14 +93,16 @@ if (spin_anim){
 				for(var l = -1; l <reel_num;++l){
 					if l == -1{
 						switch (last_spin[k][array_length(last_spin[k])-1]) {
-							case SYMBOL.BLANK: _symbol = spr_Slot_Blank;  break;
-							case SYMBOL.MONEY: _symbol = spr_Slot_Money; break;
+							case DUN_SYMBOL.GREY: _symbol = spr_Room_Base;  break;
+							case DUN_SYMBOL.RED: _symbol = spr_Room_Red;  break;
+							case DUN_SYMBOL.BLUE: _symbol = spr_Room_Blue;  break;
 						}
 					}
 					else{
 						switch (last_spin[k][l]) {
-							case SYMBOL.BLANK: _symbol = spr_Slot_Blank;  break;
-							case SYMBOL.MONEY: _symbol = spr_Slot_Money; break;
+							case DUN_SYMBOL.GREY: _symbol = spr_Room_Base;  break;
+							case DUN_SYMBOL.RED: _symbol = spr_Room_Red;  break;
+							case DUN_SYMBOL.BLUE: _symbol = spr_Room_Blue;  break;
 						}
 					}
 				}
@@ -116,23 +125,6 @@ if (spin_anim){
 		if !pay_anim Reset_Slot_State();//reset vars if no payout
 	}
 }
-#endregion
-
 draw_self();//draw the board sprite to cover up the others
 
-#region//Draw_Dungeon
-draw_sprite(spr_Room_Start,0,room_width/2-(2.5*SLOT_W), 0)
-draw_sprite(spr_Room_Finish,0,room_width/2+(1.5*SLOT_W), 0)
-for(var rm = 0; rm < array_length(global.Dungeon);rm++){
-	var _room;
-	switch(global.Dungeon[rm]){
-		case DUN_SYMBOL.GREY: _room = spr_Room_Base;
-			break;
-		case DUN_SYMBOL.RED: _room = spr_Room_Red;
-			break;
-		case DUN_SYMBOL.BLUE: _room = spr_Room_Blue;
-			break;
-	}
-	draw_sprite(_room,0,room_width/2-((rm - .5)*SLOT_W),  0)
-}
 #endregion

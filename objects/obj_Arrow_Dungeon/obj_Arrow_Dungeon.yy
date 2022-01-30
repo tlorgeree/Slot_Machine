@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_Arrow",
-    "path": "sprites/spr_Arrow/spr_Arrow.yy",
+    "name": "spr_Arror_Dungeon",
+    "path": "sprites/spr_Arror_Dungeon/spr_Arror_Dungeon.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_Arrow",
+    "path": "objects/obj_Arrow/obj_Arrow.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,17 +26,16 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [
-    {"varType":1,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"arrow_num","tags":[],"resourceType":"GMObjectProperty",},
-  ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Main_Slot",
-    "path": "folders/Objects/Main_Slot.yy",
+    "name": "Dungeon_Slot",
+    "path": "folders/Objects/Dungeon_Slot.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_Arrow",
+  "name": "obj_Arrow_Dungeon",
   "tags": [],
   "resourceType": "GMObject",
 }

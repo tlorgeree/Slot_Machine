@@ -6,6 +6,8 @@ if !global.gamepaused{
 			spin_state = true; //will calc spin
 			setup = false; //no longer change active rows
 			calc_done = false; //in spin calculation
+			pay_anim =true; 
+			anim_timer = 60;
 			global.money -= (spin_cost * power(2,active_total-1)); //pay active cost
 		}else {no_money = true; msg_timer = 60;} //else, prompt message
 	}
@@ -62,8 +64,7 @@ if !global.gamepaused{
 				array_push(payout,[5,reels_spun[0,0]]);
 			}
 		}
-		if (array_length(payout) > 0 && !pay_anim){pay_anim =true; anim_timer = 60;}
-		//else Reset_Slot_State();
+		
 		calc_done = true;//finished spin calculation
 	}
 	

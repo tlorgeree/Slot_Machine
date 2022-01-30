@@ -7,3 +7,8 @@ enum SYMBOL {
 	BLANK = 0,
 	MONEY = 1
 }
+enum DUN_SYMBOL {
+	GREY = 0,
+	RED = 1,
+	BLUE = 2
+}
