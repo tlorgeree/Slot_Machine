@@ -29,7 +29,9 @@
     {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"arrow_sprite","path":"objects/obj_Arrow/obj_Arrow.yy",},"objectId":{"name":"obj_Arrow","path":"objects/obj_Arrow/obj_Arrow.yy",},"value":"spr_Arror_Dungeon","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Dungeon_Slot",
     "path": "folders/Objects/Dungeon_Slot.yy",
