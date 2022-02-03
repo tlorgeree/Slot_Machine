@@ -4,7 +4,7 @@
     "path": "sprites/spr_Slot_Boarder/spr_Slot_Boarder.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
