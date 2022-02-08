@@ -1,6 +1,6 @@
 /// @desc
 draw_text(20,20, "Money: " + string(global.money));
-draw_text(20,35, "Spin: ENTER");
+draw_text(20,35, "Spin: SPACE");
 draw_text(20,50, "Pause: Esc");
 
 if(global.gamepaused){

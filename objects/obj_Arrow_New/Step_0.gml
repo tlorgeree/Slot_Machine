@@ -5,7 +5,7 @@ if !(global.gamepaused){
 		//show_message(string(arrow_num));
 		id.active = !id.active;
 		if (active){
-			with (obj_Slot_Machine){//update slot_machine
+			with (obj_Slot_Machine_New){//update slot_machine
 				if (global.money) >= spin_cost * power(2,active_total){
 					active[other.arrow_num-1] = true;
 					other.image_index = 1;
@@ -14,9 +14,9 @@ if !(global.gamepaused){
 			}
 		}
 		else {
-			obj_Slot_Machine.active[arrow_num-1] = false;
+			obj_Slot_Machine_New.active[arrow_num-1] = false;
 			image_index = 0;
 		}
-		obj_Slot_Machine.active_calc = true;
+		obj_Slot_Machine_New.active_calc = true;
 	}
 }

@@ -5,7 +5,9 @@
 //Symbols
 enum SYMBOL {
 	BLANK = 0,
-	MONEY = 1
+	MONEY = 1,
+	SWORD = 2,
+	SHIELD = 3
 }
 enum DUN_SYMBOL {
 	GREY = 0,
