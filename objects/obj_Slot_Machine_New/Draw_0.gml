@@ -9,7 +9,7 @@ for (var i = 0; i<reel_num;++i){
 			case SYMBOL.SWORD: _symbol = spr_Slot_Sword; break;
 			case SYMBOL.SHIELD: _symbol = spr_Slot_Shield; break;
 		}
-		Draw_Slot_Position(_symbol, 0, i, j);
+		if(spin_timer[i] == 0) Draw_Slot_Position_New(_symbol, 0, i, j);
 	}
 }
 
@@ -17,26 +17,27 @@ for (var i = 0; i<reel_num;++i){
 if (pay_anim) && (!spin_anim){
 	if (anim_ind<array_length(payout)){//if there are payouts, animate
 		draw_set_alpha(anim_timer/60); //flash effect
+		var _highlight = spr_Highlight_Green_New
 		switch (payout[anim_ind,0]){ //controller for each row
-			case 1: Draw_Slot_Position(spr_Highlight_Green,0,0,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,1);
+			case 1: Draw_Slot_Position_New(_highlight,0,0,1);
+					Draw_Slot_Position_New(_highlight,0,1,1);
+					Draw_Slot_Position_New(_highlight,0,2,1);
 					break;
-			case 2: Draw_Slot_Position(spr_Highlight_Green,0,0,0);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,0);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,0);
+			case 2: Draw_Slot_Position_New(_highlight,0,0,0);
+					Draw_Slot_Position_New(_highlight,0,1,0);
+					Draw_Slot_Position_New(_highlight,0,2,0);
 					break;
-			case 3: Draw_Slot_Position(spr_Highlight_Green,0,0,2);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,2);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,2);
+			case 3: Draw_Slot_Position_New(_highlight,0,0,2);
+					Draw_Slot_Position_New(_highlight,0,1,2);
+					Draw_Slot_Position_New(_highlight,0,2,2);
 					break;
-			case 4: Draw_Slot_Position(spr_Highlight_Green,0,0,0);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,2);
+			case 4: Draw_Slot_Position_New(_highlight,0,0,0);
+					Draw_Slot_Position_New(_highlight,0,1,1);
+					Draw_Slot_Position_New(_highlight,0,2,2);
 					break;		
-			case 5: Draw_Slot_Position(spr_Highlight_Green,0,0,2);
-					Draw_Slot_Position(spr_Highlight_Green,0,1,1);
-					Draw_Slot_Position(spr_Highlight_Green,0,2,0);
+			case 5: Draw_Slot_Position_New(_highlight,0,0,2);
+					Draw_Slot_Position_New(_highlight,0,1,1);
+					Draw_Slot_Position_New(_highlight,0,2,0);
 					break;		
 		}
 		if (!global.gamepaused) anim_timer--; //pause animation with pause
@@ -143,3 +144,8 @@ for(var rm = 0; rm < array_length(global.Dungeon);rm++){
 }
 #endregion
 */
+
+//Draw Border
+draw_sprite(spr_Dungeon_Border,0,x,y);
+draw_sprite(spr_Reel_Area,0,x,y);
+draw_sprite(spr_Screen,0,129,22);
