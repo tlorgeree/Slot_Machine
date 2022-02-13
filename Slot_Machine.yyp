@@ -3,6 +3,7 @@
     {"id":{"name":"spr_Arrow_Side","path":"sprites/spr_Arrow_Side/spr_Arrow_Side.yy",},"order":2,},
     {"id":{"name":"spr_Highlight_Green","path":"sprites/spr_Highlight_Green/spr_Highlight_Green.yy",},"order":3,},
     {"id":{"name":"obj_Slot_Reel","path":"objects/obj_Slot_Reel/obj_Slot_Reel.yy",},"order":0,},
+    {"id":{"name":"Array_Handling","path":"scripts/Array_Handling/Array_Handling.yy",},"order":2,},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":0,},
     {"id":{"name":"spr_Highlight_Green_New","path":"sprites/spr_Highlight_Green_New/spr_Highlight_Green_New.yy",},"order":12,},
     {"id":{"name":"obj_Game_Over_Menu","path":"objects/obj_Game_Over_Menu/obj_Game_Over_Menu.yy",},"order":3,},

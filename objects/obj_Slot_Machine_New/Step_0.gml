@@ -34,38 +34,80 @@ if !global.gamepaused{
 	//calculate payout
 	if (!calc_done){
 		if (active[0]){
-			if (reels_spun[0,1] != 0) 
-			&& (reels_spun[0,1] == reels_spun[1,1] && reels_spun[1,1] == reels_spun[2,1]){
-				array_push(payout,[1,reels_spun[0,1]]);
-			
+			var _temp = [];
+			var _valid = true;
+			for (var i = 0; i <=2; ++i){
+				if(reels_spun[i,1][0] == TYPE.BLANK){_valid = false;break}
+				if(reels_spun[i,1][0] != TYPE.MONEY){
+					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,1]);
+					else{
+						if (In_1D_Array(_temp,reels_spun[i,1]) == false) _valid = false;
+					}
+				}
 			}
+			show_debug_message("Valid: " + string(_valid));
+			if(_valid) array_push(payout,[1,_temp[0]]);
+			
 		}
 		if (active[1]){
-			if (reels_spun[0,0]!= 0)
-			&& (reels_spun[0,0] == reels_spun[1,0] && reels_spun[1,0] == reels_spun[2,0]){
-				array_push(payout,[2,reels_spun[0,0]]);
+			var _temp = [];
+			var _valid = true;
+			for (var i = 0; i <=2; ++i){
+				if(reels_spun[i,0][0] == TYPE.BLANK){_valid = false;break}
+				if(reels_spun[i,0][0] != TYPE.MONEY){
+					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,0]);
+					else{
+						if (In_1D_Array(_temp,reels_spun[i,0]) == false) _valid = false;
+					}
+				}
 			}
+			if(_valid) array_push(payout,[2,_temp[0]]);
 		}
 		if (active[2]){
-			if (reels_spun[0,2] != 0)
-			&& (reels_spun[0,2] == reels_spun[1,2] && reels_spun[1,2] == reels_spun[2,2]){
-				array_push(payout,[3,reels_spun[0,0]]);
+			var _temp = [];
+			var _valid = true;
+			for (var i = 0; i <=2; ++i){
+				if(reels_spun[i,2][0] == TYPE.BLANK){_valid = false;break}
+				if(reels_spun[i,2][0] != TYPE.MONEY){
+					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,2]);
+					else{
+						if (In_1D_Array(_temp,reels_spun[i,2]) == false) _valid = false;
+					}
+				}
 			}
+			if(_valid) array_push(payout,[3,_temp[0]]);
 		}
 		if (active[3]){
-			if (reels_spun[0,0] != 0)
-			&& (reels_spun[0,0] == reels_spun[1,1] && reels_spun[1,1] == reels_spun[2,2]){
-				array_push(payout,[4,reels_spun[0,0]]);
+			var _temp = [];
+			var _valid = true;
+			for (var i = 0; i <=2; ++i){
+				if(reels_spun[i,i][0] == TYPE.BLANK){_valid = false;break}
+				if(reels_spun[i,i][0] != TYPE.MONEY){
+					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,i]);
+					else{
+						if (In_1D_Array(_temp,reels_spun[i,i]) == false) _valid = false;
+					}
+				}
 			}
+			if(_valid) array_push(payout,[4,_temp[0]]);
 		}
 		if (active[4]){
-			if (reels_spun[0,2] != 0)
-			&& (reels_spun[0,2] == reels_spun[1,1] && reels_spun[1,1] == reels_spun[2,0]){
-				array_push(payout,[5,reels_spun[0,0]]);
+			var _temp = [];
+			var _valid = true;
+			for (var i = 0; i <=2; ++i){
+				if(reels_spun[i,2-i][0] == TYPE.BLANK){_valid = false;break}
+				if(reels_spun[i,2-i][0] != TYPE.MONEY){
+					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,2-i]);
+					else{
+						if (In_1D_Array(_temp,reels_spun[i,2-i]) == false) _valid = false;
+					}
+				}
 			}
+			if(_valid) array_push(payout,[5,_temp[0]]);
 		}
 		
 		calc_done = true;//finished spin calculation
+		show_debug_message(string(payout));
 	}
 	
 	//reset variables and change # active rows

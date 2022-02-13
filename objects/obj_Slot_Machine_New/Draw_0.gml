@@ -3,11 +3,19 @@ for (var i = 0; i<reel_num;++i){
 	for (var j = 0; j<symbol_num;++j){
 		var _symbol;
 		
-		switch (reels_spun[i][j]) {
-			case SYMBOL.BLANK: _symbol = spr_Slot_Empty;  break;
-			case SYMBOL.MONEY: _symbol = spr_Slot_Gold; break;
-			case SYMBOL.SWORD: _symbol = spr_Slot_Sword; break;
-			case SYMBOL.SHIELD: _symbol = spr_Slot_Shield; break;
+		switch (reels_spun[i][j][0]) {
+			case TYPE.BLANK: switch(reels_spun[i][j][1]) {
+				case BLANK.BASE: _symbol = spr_Slot_Empty; break;
+			}break;
+			case TYPE.MONEY: switch(reels_spun[i][j][1]) {
+				case MONEY.COIN: _symbol = spr_Slot_Gold; break;
+			}break;
+			case TYPE.WEAPON: switch(reels_spun[i][j][1]) {
+				case WEAPON.SWORD: _symbol = spr_Slot_Sword; break;
+			}break;
+			case TYPE.DEFENSE: switch(reels_spun[i][j][1]) {
+				case DEFENSE.SHIELD: _symbol = spr_Slot_Shield; break;
+			}break;
 		}
 		if(spin_timer[i] == 0) Draw_Slot_Position_New(_symbol, 0, i, j);
 	}
@@ -87,20 +95,37 @@ if (spin_anim){
 			var _symbol;
 			for(var k = 0; k<reel_num;++k){
 				for(var l = -1; l <reel_num;++l){
+					var _check = last_spin[k][array_length(last_spin[k])-1];
 					if l == -1{
-						switch (last_spin[k][array_length(last_spin[k])-1]) {
-							case SYMBOL.BLANK: _symbol = spr_Slot_Empty;  break;
-							case SYMBOL.MONEY: _symbol = spr_Slot_Gold; break;
-							case SYMBOL.SWORD: _symbol = spr_Slot_Sword; break;
-							case SYMBOL.SHIELD: _symbol = spr_Slot_Shield; break;
+						switch (_check[0]) {
+							case TYPE.BLANK: switch(_check[1]) {
+								case BLANK.BASE: _symbol = spr_Slot_Empty; break;
+							}break;
+							case TYPE.MONEY: switch(_check[1]) {
+								case MONEY.COIN: _symbol = spr_Slot_Gold; break;
+							}break;
+							case TYPE.WEAPON: switch(_check[1]) {
+								case WEAPON.SWORD: _symbol = spr_Slot_Sword; break;
+							}break;
+							case TYPE.DEFENSE: switch(_check[1]) {
+								case DEFENSE.SHIELD: _symbol = spr_Slot_Shield; break;
+							}break;
 						}
 					}
 					else{
-						switch (last_spin[k][l]) {
-							case SYMBOL.BLANK: _symbol = spr_Slot_Empty;  break;
-							case SYMBOL.MONEY: _symbol = spr_Slot_Gold; break;
-							case SYMBOL.SWORD: _symbol = spr_Slot_Sword; break;
-							case SYMBOL.SHIELD: _symbol = spr_Slot_Shield; break;
+						switch (_check[0]) {
+							case TYPE.BLANK: switch(_check[1]) {
+								case BLANK.BASE: _symbol = spr_Slot_Empty; break;
+							}break;
+							case TYPE.MONEY: switch(_check[1]) {
+								case MONEY.COIN: _symbol = spr_Slot_Gold; break;
+							}break;
+							case TYPE.WEAPON: switch(_check[1]) {
+								case WEAPON.SWORD: _symbol = spr_Slot_Sword; break;
+							}break;
+							case TYPE.DEFENSE: switch(_check[1]) {
+								case DEFENSE.SHIELD: _symbol = spr_Slot_Shield; break;
+							}break;
 						}
 					}
 				}

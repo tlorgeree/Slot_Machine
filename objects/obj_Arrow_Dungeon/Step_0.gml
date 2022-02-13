@@ -8,7 +8,6 @@ if !(global.gamepaused){
 			with (obj_Dungeon_Slot){//update slot_machine
 				
 					if (active_total == 0){
-						show_debug_message("This happened 2");
 						active_total = 1;
 						active_calc = true;
 						active[other.arrow_num-1]=1;

@@ -5,9 +5,12 @@ depth = 1;
 slots = [-1,-1,-1]; //Holds ID values for each reel
 reel_num = 3; //number of reels in game
 symbol_num = 3;
-reels[0] = [0,1,2,3]; //reels[] stores the symbol data for each reel
-reels[1] = [3,2,1,0];
-reels[2] = [2,1,3,0];
+reels[0] = [[TYPE.BLANK,BLANK.BASE],[TYPE.MONEY,MONEY.COIN],
+[TYPE.WEAPON,WEAPON.SWORD],[TYPE.DEFENSE,DEFENSE.SHIELD]]; //reels[] stores the symbol data for each reel
+reels[1] = [[TYPE.DEFENSE,DEFENSE.SHIELD],[TYPE.WEAPON,WEAPON.SWORD],
+[TYPE.MONEY,MONEY.COIN],[TYPE.BLANK,BLANK.BASE]];
+reels[2] = [[TYPE.MONEY,MONEY.COIN],[TYPE.DEFENSE,DEFENSE.SHIELD],
+[TYPE.BLANK,BLANK.BASE],[TYPE.WEAPON,WEAPON.SWORD]];
 reels_spun[0] = reels[0]; //This is the resulting output from a spin
 reels_spun[1] = reels[1];
 reels_spun[2] = reels[2];

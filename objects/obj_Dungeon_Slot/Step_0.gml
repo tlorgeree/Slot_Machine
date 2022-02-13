@@ -1,7 +1,6 @@
 if !global.gamepaused{	
 	//Control Machine Spin
 	//Hit spacebar to start the spin
-	show_debug_message(string(active_total));
 	if (keyboard_check_pressed(vk_space) && !spin_anim && !pay_anim
 	&& calc_done && active_total>0){
 		
@@ -48,4 +47,3 @@ if !global.gamepaused{
 		}
 	}
 }
-show_debug_message(string(global.Dungeon));

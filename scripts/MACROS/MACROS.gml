@@ -3,11 +3,24 @@
 #macro SLOT_H 32
 
 //Symbols
-enum SYMBOL {
+enum TYPE {
 	BLANK = 0,
 	MONEY = 1,
-	SWORD = 2,
-	SHIELD = 3
+	WEAPON = 2,
+	DEFENSE = 3
+}
+enum WEAPON {
+	SWORD = 0
+}
+
+enum DEFENSE {
+	SHIELD = 0
+}
+enum MONEY {
+	COIN = 0
+}
+enum BLANK {
+	BASE = 0
 }
 enum DUN_SYMBOL {
 	GREY = 0,
