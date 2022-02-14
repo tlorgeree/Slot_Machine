@@ -4,8 +4,8 @@ draw_text(20,35, "Spin: SPACE");
 draw_text(20,50, "Pause: Esc");
 
 draw_text(300,20, "Last Money Payout: " + string (global.Money_Payout));
-draw_text(300,35, "Last Money Payout: " + string (global.Damage_Payout));
-draw_text(300,50, "Last Money Payout: " + string (global.Defense_Payout));
+draw_text(300,35, "Last Weapon Payout: " + string (global.Damage_Payout));
+draw_text(300,50, "Last Defense Payout: " + string (global.Defense_Payout));
 
 
 if(global.gamepaused){

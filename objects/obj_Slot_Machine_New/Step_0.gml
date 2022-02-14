@@ -45,8 +45,7 @@ if !global.gamepaused{
 					}
 				}
 			}
-			show_debug_message("Valid: " + string(_valid));
-			if(_valid) array_push(payout,[1,_temp[0]]);
+			if(_valid) array_push(payout,[1]);
 			
 		}
 		if (active[1]){
@@ -61,7 +60,7 @@ if !global.gamepaused{
 					}
 				}
 			}
-			if(_valid) array_push(payout,[2,_temp[0]]);
+			if(_valid) array_push(payout,[2]);
 		}
 		if (active[2]){
 			var _temp = [];
@@ -75,7 +74,7 @@ if !global.gamepaused{
 					}
 				}
 			}
-			if(_valid) array_push(payout,[3,_temp[0]]);
+			if(_valid) array_push(payout,[3]);
 		}
 		if (active[3]){
 			var _temp = [];
@@ -89,7 +88,7 @@ if !global.gamepaused{
 					}
 				}
 			}
-			if(_valid) array_push(payout,[4,_temp[0]]);
+			if(_valid) array_push(payout,[4]);
 		}
 		if (active[4]){
 			var _temp = [];
@@ -103,10 +102,13 @@ if !global.gamepaused{
 					}
 				}
 			}
-			if(_valid) array_push(payout,[5,_temp[0]]);
+			if(_valid) array_push(payout,[5]);
 		}
 		
 		calc_done = true;//finished spin calculation
+		global.Damage_Payout = 0;
+		global.Defense_Payout = 0;
+		global.Money_Payout = 0;
 		show_debug_message(string(payout));
 	}
 	
