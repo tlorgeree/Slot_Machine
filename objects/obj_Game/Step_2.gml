@@ -10,7 +10,7 @@ if (global.dungeon_calc){
 	global.dungeon_calc = false;
 }
 
-if (room == rm_Slot_Machine) && (!obj_Slot_Machine_New.pay_anim)
+if (room == rm_Slot_Machine_New) && (!obj_Slot_Machine_New.pay_anim)
 &&(global.money<obj_Slot_Machine_New.spin_cost) room_goto(rm_Game_Over);
 if ((room == rm_Game_Over) && (keyboard_check_pressed(vk_enter))){
 	room_goto(rm_Title);
