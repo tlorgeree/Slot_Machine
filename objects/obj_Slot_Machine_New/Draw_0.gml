@@ -25,36 +25,128 @@ for (var i = 0; i<reel_num;++i){
 if (pay_anim) && (!spin_anim){
 	if (anim_ind<array_length(payout)){//if there are payouts, animate
 		draw_set_alpha(anim_timer/60); //flash effect
-		var _highlight = spr_Highlight_Green_New
+		var _highlight = spr_Highlight_Green_New;
+		var _money = [0];//index corresponds with enum number
+		var _defense = [0];
+		var _weapon = [0];
+		global.Money_Payout = 0;
+		global.Damage_Payout = 0;
+		global.Defense_Payout = 0;
 		switch (payout[anim_ind,0]){ //controller for each row
 			case 1: Draw_Slot_Position_New(_highlight,0,0,1);
 					Draw_Slot_Position_New(_highlight,0,1,1);
 					Draw_Slot_Position_New(_highlight,0,2,1);
+					for (var ind = 0; ind<=2;++ind){
+						switch(reels_spun[browser_windows_store,1][0]){
+							case TYPE.MONEY: switch(reels_spun[ind,1][1]){
+								case MONEY.COIN: ++_money[MONEY.COIN];break;
+							}break;							
+							case TYPE.WEAPON: switch(reels_spun[ind,1][1]){
+								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
+							}break;							
+							case TYPE.DEFENSE: switch(reels_spun[ind,1][1]){
+								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
+							}break;
+						}
+					}
 					break;
 			case 2: Draw_Slot_Position_New(_highlight,0,0,0);
 					Draw_Slot_Position_New(_highlight,0,1,0);
 					Draw_Slot_Position_New(_highlight,0,2,0);
+					for (var ind = 0; ind<=2;++ind){
+						switch(reels_spun[ind,0][0]){
+							case TYPE.MONEY: switch(reels_spun[ind,0][1]){
+								case MONEY.COIN: ++_money[MONEY.COIN];break;
+							}break;							
+							case TYPE.WEAPON: switch(reels_spun[ind,0][1]){
+								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
+							}break;							
+							case TYPE.DEFENSE: switch(reels_spun[ind,0][1]){
+								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
+							}break;
+						}
+					}
 					break;
 			case 3: Draw_Slot_Position_New(_highlight,0,0,2);
 					Draw_Slot_Position_New(_highlight,0,1,2);
 					Draw_Slot_Position_New(_highlight,0,2,2);
+					for (var ind = 0; ind<=2;++ind){
+						switch(reels_spun[ind,2][0]){
+							case TYPE.MONEY: switch(reels_spun[ind,2][1]){
+								case MONEY.COIN: ++_money[MONEY.COIN];break;
+							}break;							
+							case TYPE.WEAPON: switch(reels_spun[ind,2][1]){
+								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
+							}break;							
+							case TYPE.DEFENSE: switch(reels_spun[ind,2][1]){
+								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
+							}break;
+						}
+					}
 					break;
 			case 4: Draw_Slot_Position_New(_highlight,0,0,0);
 					Draw_Slot_Position_New(_highlight,0,1,1);
 					Draw_Slot_Position_New(_highlight,0,2,2);
+					for (var ind = 0; ind<=2;++ind){
+						switch(reels_spun[ind,1][0]){
+							case TYPE.MONEY: switch(reels_spun[ind,ind][1]){
+								case MONEY.COIN: ++_money[MONEY.COIN];break;
+							}break;							
+							case TYPE.WEAPON: switch(reels_spun[ind,ind][1]){
+								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
+							}break;							
+							case TYPE.DEFENSE: switch(reels_spun[ind,ind][1]){
+								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
+							}break;
+						}
+					}
 					break;		
 			case 5: Draw_Slot_Position_New(_highlight,0,0,2);
 					Draw_Slot_Position_New(_highlight,0,1,1);
 					Draw_Slot_Position_New(_highlight,0,2,0);
+					for (var ind = 0; ind<=2;++ind){
+						switch(reels_spun[ind,1][0]){
+							case TYPE.MONEY: switch(reels_spun[ind,2-ind][1]){
+								case MONEY.COIN: ++_money[MONEY.COIN];break;
+							}break;							
+							case TYPE.WEAPON: switch(reels_spun[ind,2-ind][1]){
+								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
+							}break;							
+							case TYPE.DEFENSE: switch(reels_spun[ind,2-ind][1]){
+								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
+							}break;
+						}
+					}
 					break;		
 		}
 		if (!global.gamepaused) anim_timer--; //pause animation with pause
 		if (anim_timer<=0){ //if done animating, check next row
 			anim_ind++;
 			anim_timer = 60;
-			global.money += 1000;
-			
 		}
+		//Apply payout wins
+			//MONEY payouts
+			for (var c = 0; c<array_length(_money);++c){
+				switch[c]{
+					case MONEY.COIN: global.Money_Payout += (400*_money[MONEY.COIN] + (200*_money[MONEY.COIN]-1));
+					global.money += (400*_money[MONEY.COIN] + (200*_money[MONEY.COIN]-1));
+					break;
+				}
+			}
+			//WEAPON payouts
+			for (var w = 0; w<array_length(_weapon);++w){
+				switch[w]{
+					case WEAPON.SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (1*_weapon[WEAPON.SWORD]-1));
+					break;
+				}
+			}
+			//DEFENSE payouts
+			for (var d = 0; d<array_length(_defense);++d){
+				switch[d]{
+					case DEFENSE.SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.SHIELD] + (1*_defense[DEFENSE.SHIELD]-1));
+					break;
+				}
+			}
 	}else Reset_Slot_State_New();
 	
 }
