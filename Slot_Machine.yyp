@@ -33,6 +33,7 @@
     {"id":{"name":"obj_Game","path":"objects/obj_Game/obj_Game.yy",},"order":1,},
     {"id":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"order":0,},
     {"id":{"name":"spr_Spawner","path":"sprites/spr_Spawner/spr_Spawner.yy",},"order":14,},
+    {"id":{"name":"spr_Elite_Eyes","path":"sprites/spr_Elite_Eyes/spr_Elite_Eyes.yy",},"order":14,},
     {"id":{"name":"spr_Title","path":"sprites/spr_Title/spr_Title.yy",},"order":5,},
     {"id":{"name":"obj_Arrow","path":"objects/obj_Arrow/obj_Arrow.yy",},"order":2,},
     {"id":{"name":"spr_Dungeon_Wall","path":"sprites/spr_Dungeon_Wall/spr_Dungeon_Wall.yy",},"order":5,},
