@@ -8,6 +8,7 @@ if ((room == rm_Title) && (keyboard_check_pressed(vk_enter))){
 if (global.dungeon_calc){
 	room_goto(rm_Slot_Machine_New);
 	global.dungeon_calc = false;
+
 }
 
 if (room == rm_Slot_Machine_New) && (!obj_Slot_Machine_New.pay_anim)
