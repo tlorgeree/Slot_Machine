@@ -1,7 +1,10 @@
-/// @desc game paused
+//Pause Game
 if (keyboard_check_pressed(vk_escape)){
 	global.gamepaused = !global.gamepaused;	
 }
+//Reset Game
+if (keyboard_check_pressed(vk_backspace)) game_restart();
+if (keyboard_check_pressed(ord("Q"))) game_end();
 if ((room == rm_Title) && (keyboard_check_pressed(vk_enter))){
 	room_goto(rm_Dungeon_Slot);
 }
@@ -17,4 +20,8 @@ if ((room == rm_Game_Over) && (keyboard_check_pressed(vk_enter))){
 	room_goto(rm_Title);
 	global.Dungeon= [0,0,0]
 	global.gamepaused = false;
+}
+if (keyboard_check_pressed(ord("P"))){
+	global.res_set.Resize_Large();
+	alarm[0] = 2;//1 frame doesn't catch the full screen exit
 }

@@ -164,21 +164,6 @@ if (pay_anim) && (!spin_anim){
 
 draw_set_alpha(1);
 
-#region Messages
-if (no_money){ //Tell player they can't afford the action
-	draw_set_alpha(msg_timer/60);
-	draw_set_color(c_red);
-	draw_set_halign(fa_center);
-	if (msg_timer > 0){
-		draw_text_transformed(room_width/2, room_height/2, "Not enough money", 1,1,0);
-		if (!global.gamepaused) msg_timer--;//pause timer with pause
-	}
-	else no_money = false;
-}
-draw_set_alpha(1);
-draw_set_color(c_white);
-draw_set_halign(fa_left);
-#endregion
 
 #region Spin Animation
 if (spin_anim){
@@ -277,3 +262,19 @@ for(var rm = 0; rm < array_length(global.Dungeon);rm++){
 draw_sprite(spr_Dungeon_Border,0,x,y);
 draw_sprite(spr_Reel_Area,0,x,y);
 draw_sprite(spr_Screen,0,129,22);
+
+#region Messages
+if (no_money){ //Tell player they can't afford the action
+	draw_set_alpha(msg_timer/60);
+	draw_set_color(c_red);
+	draw_set_halign(fa_center);
+	if (msg_timer > 0){
+		draw_text_transformed(room_width/2, room_height/2, "Not enough money", 1,1,0);
+		if (!global.gamepaused) msg_timer--;//pause timer with pause
+	}
+	else no_money = false;
+}
+draw_set_alpha(1);
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+#endregion
