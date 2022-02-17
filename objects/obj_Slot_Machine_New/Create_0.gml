@@ -19,6 +19,12 @@ last_spin[1] = reels[1];
 last_spin[2] = reels[2];
 #endregion
 
+#region Spawner
+screen_coordx = 171;
+screen_coordy = 72;
+instance_create_layer(screen_coordx,screen_coordy,"Instances",obj_Spawner);
+#endregion
+
 #region Slot Controller Variables
 spin_cost = 200; //Cost of 1 spin
 active = [0,0,0,0,0]; //#active rows

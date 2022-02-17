@@ -261,7 +261,7 @@ for(var rm = 0; rm < array_length(global.Dungeon);rm++){
 //Draw Border
 draw_sprite(spr_Dungeon_Border,0,x,y);
 draw_sprite(spr_Reel_Area,0,x,y);
-draw_sprite(spr_Screen,0,129,22);
+draw_sprite(spr_Screen,0,screen_coordx,screen_coordy);
 
 #region Messages
 if (no_money){ //Tell player they can't afford the action
