@@ -14,7 +14,7 @@ if(spawn == true){
 	switch(global.Dungeon[global.room_curr]){
 		case DUN_SYMBOL.GREY: _choice = irandom(global.event_num-1);
 			switch(_choice){
-				case EVENT.ALTAR: _to_spawn = obj_Altar;
+				case EVENT.ALTAR: _to_spawn = obj_Event_Altar;
 					break;
 			}
 			slot_mode = SLOT_MODE.EVENT;

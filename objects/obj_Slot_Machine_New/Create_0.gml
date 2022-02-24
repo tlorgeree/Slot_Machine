@@ -27,7 +27,7 @@ instance_create_layer(screen_coordx,screen_coordy,"Instances",obj_Spawner);
 spawn = true;
 #endregion
 
-#region Room_Modes
+#region Room_Mode
 slot_mode = SLOT_MODE.NULL;
 p_turn = true;
 #endregion

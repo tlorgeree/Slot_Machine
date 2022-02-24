@@ -157,7 +157,19 @@ if (pay_anim) && (!spin_anim){
 		
 		
 	}else {
-		Reset_Slot_State_New();
+		switch(slot_mode){
+			case SLOT_MODE.BATTLE: 
+				if(p_turn){
+					obj_Monster_Parent.is_turn = true;
+					p_turn = false;
+				}
+				
+				if (!obj_Monster_Parent.is_turn && !p_turn) Reset_Slot_State_New();
+				break;
+			case SLOT_MODE.EVENT: Reset_Slot_State_New(); break;
+			default: Reset_Slot_State_New(); break;
+		}
+		
 	}
 	
 }

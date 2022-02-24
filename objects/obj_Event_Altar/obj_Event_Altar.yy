@@ -28,7 +28,7 @@
     "path": "folders/Objects/Event_Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_Altar",
+  "name": "obj_Event_Altar",
   "tags": [],
   "resourceType": "GMObject",
 }

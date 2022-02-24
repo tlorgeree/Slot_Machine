@@ -31,6 +31,7 @@ function Reset_Slot_State_New(){
 	active = [0,0,0,0,0];
 	active_total = 0;
 	spin_lock = false;
+	p_turn = true;
 	obj_Arrow_New.active = false;
 	obj_Arrow_New.image_index = 0;
 }
