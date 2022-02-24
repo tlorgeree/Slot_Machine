@@ -17,6 +17,7 @@ if(spawn == true){
 				case EVENT.ALTAR: _to_spawn = obj_Altar;
 					break;
 			}
+			slot_mode = SLOT_MODE.EVENT;
 			break;
 		
 		case DUN_SYMBOL.RED: _choice = irandom(global.mon_basic_num-1);
@@ -24,6 +25,7 @@ if(spawn == true){
 				case MON_BASIC.EYE: _to_spawn = obj_Monster_Eyeball;
 					break;
 			}
+			slot_mode = SLOT_MODE.BATTLE;
 			break;
 		
 		case DUN_SYMBOL.BLUE: _choice = irandom(global.mon_elite_num-1);
@@ -31,9 +33,10 @@ if(spawn == true){
 				case MON_ELITE.EYE: _to_spawn = obj_Monster_Elite_Eyeball;
 					break;
 			}
+			slot_mode = SLOT_MODE.BATTLE;
 			break;
 	}
-	show_debug_message("To choice roll was:" + string(_choice));
+
 	instance_create_layer(obj_Spawner.x, obj_Spawner.y,"Spawns", _to_spawn);
 	spawn = false;
 }

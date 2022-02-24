@@ -41,3 +41,10 @@ enum MON_ELITE{
 enum MON_BOSS{
 	EYE = 0
 }
+
+//Slot Modes
+enum SLOT_MODE{
+	NULL = -1,
+	BATTLE = 0,
+	EVENT = 1,
+}

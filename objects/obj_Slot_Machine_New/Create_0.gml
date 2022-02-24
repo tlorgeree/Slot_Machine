@@ -27,6 +27,11 @@ instance_create_layer(screen_coordx,screen_coordy,"Instances",obj_Spawner);
 spawn = true;
 #endregion
 
+#region Room_Modes
+slot_mode = SLOT_MODE.NULL;
+p_turn = true;
+#endregion
+
 #region Slot Controller Variables
 spin_cost = 200; //Cost of 1 spin
 active = [0,0,0,0,0]; //#active rows
