@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_Monster_Eyes",
-    "path": "sprites/spr_Monster_Eyes/spr_Monster_Eyes.yy",
+    "name": "spr_Altar",
+    "path": "sprites/spr_Altar/spr_Altar.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_Monster_Parent",
-    "path": "objects/obj_Monster_Parent/obj_Monster_Parent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -27,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Monsters",
-    "path": "folders/Objects/Monsters.yy",
+    "name": "Event_Objects",
+    "path": "folders/Objects/Event_Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_Monster_Eyeball",
+  "name": "obj_Altar",
   "tags": [],
   "resourceType": "GMObject",
 }

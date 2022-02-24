@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "New_Sprites",
+    "path": "folders/Sprites/New_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Arror_Dungeon",

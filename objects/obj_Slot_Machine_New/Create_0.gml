@@ -2,6 +2,7 @@
 depth = 1;
 
 #region Slot Reels
+spin_lock = false;
 slots = [-1,-1,-1]; //Holds ID values for each reel
 reel_num = 3; //number of reels in game
 symbol_num = 3;
@@ -23,6 +24,7 @@ last_spin[2] = reels[2];
 screen_coordx = 171;
 screen_coordy = 72;
 instance_create_layer(screen_coordx,screen_coordy,"Instances",obj_Spawner);
+spawn = true;
 #endregion
 
 #region Slot Controller Variables

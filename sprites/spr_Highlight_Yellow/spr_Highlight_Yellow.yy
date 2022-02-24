@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Dungeon_Slot",
+    "path": "folders/Sprites/Dungeon_Slot.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Highlight_Yellow",

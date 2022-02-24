@@ -16,6 +16,11 @@ global.Money_Payout = 0;
 global.Damage_Payout = 0;
 global.Defense_Payout = 0;
 
+global.event_num = 1;
+global.mon_basic_num = 1;
+global.mon_elite_num = 1;
+global.mon_boss_num = 1;
+
 #region Resolution Scaling
 
 global.res_set = {

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "New_Sprites",
-    "path": "folders/Sprites/New_Sprites.yy",
+    "name": "Monsters",
+    "path": "folders/Sprites/Monsters.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Elite_Eyes",

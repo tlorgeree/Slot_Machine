@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Main_Slot",
+    "path": "folders/Sprites/Main_Slot.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Main_Board",

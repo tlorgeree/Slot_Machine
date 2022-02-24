@@ -27,3 +27,17 @@ enum DUN_SYMBOL {
 	RED = 1,
 	BLUE = 2
 }
+
+//Room Types
+enum EVENT{
+	ALTAR = 0
+}
+enum MON_BASIC{
+	EYE = 0
+}	
+enum MON_ELITE{
+	EYE = 0
+}
+enum MON_BOSS{
+	EYE = 0
+}
