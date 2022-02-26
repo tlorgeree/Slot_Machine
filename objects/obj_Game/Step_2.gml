@@ -15,7 +15,11 @@ if (global.dungeon_calc){
 }
 
 if (room == rm_Slot_Machine_New) && (!obj_Slot_Machine_New.pay_anim)
-&&(global.money<obj_Slot_Machine_New.spin_cost) room_goto(rm_Game_Over);
+&&(global.money<obj_Slot_Machine_New.spin_cost){
+	room_goto(rm_Game_Over);
+	global.meta_currency += global.rooms_completed;
+	global.rooms_completed = 0;
+}
 if ((room == rm_Game_Over) && (keyboard_check_pressed(vk_enter))){
 	room_goto(rm_Title);
 	global.Dungeon= [0,0,0];

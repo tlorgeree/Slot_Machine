@@ -25,7 +25,8 @@ enum BLANK {
 enum DUN_SYMBOL {
 	GREY = 0,
 	RED = 1,
-	BLUE = 2
+	BLUE = 2,
+	BOSS = 3
 }
 
 //Room Types

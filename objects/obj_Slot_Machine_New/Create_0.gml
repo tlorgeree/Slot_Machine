@@ -33,7 +33,7 @@ p_turn = true;
 #endregion
 
 #region Slot Controller Variables
-spin_cost = 200; //Cost of 1 spin
+spin_cost = 500; //Cost of 1 spin
 active = [0,0,0,0,0]; //#active rows
 active_total = 0;//for slot cost calc
 active_calc = 0;//recalculate active slots

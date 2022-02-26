@@ -12,6 +12,8 @@ draw_set_halign(fa_left);
 
 draw_set_halign(fa_right);
 draw_text(view_wport[0]*(7/8),20, "Current_Room: " + string(global.room_curr));
+draw_text(view_wport[0]*(7/8),35, "Rooms Completed: " + string(global.rooms_completed));
+draw_text(view_wport[0]*(7/8),50, "Meta Currency: " + string(global.meta_currency));
 draw_set_halign(fa_left);
 
 if(global.gamepaused){

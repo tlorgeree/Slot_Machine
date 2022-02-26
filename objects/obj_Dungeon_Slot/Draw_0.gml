@@ -22,27 +22,27 @@ if (pay_anim) && (!spin_anim){
 			case 1: Draw_Slot_Position(_highlight,0,0,1);
 					Draw_Slot_Position(_highlight,0,1,1);
 					Draw_Slot_Position(_highlight,0,2,1);
-					global.Dungeon = [reels_spun[0,1],reels_spun[1,1],reels_spun[2,1]];
+					global.Dungeon = [reels_spun[0,1],reels_spun[1,1],reels_spun[2,1],3];
 					break;
 			case 2: Draw_Slot_Position(_highlight,0,0,0);
 					Draw_Slot_Position(_highlight,0,1,0);
 					Draw_Slot_Position(_highlight,0,2,0);
-					global.Dungeon = [reels_spun[0,0],reels_spun[1,0],reels_spun[2,0]];
+					global.Dungeon = [reels_spun[0,0],reels_spun[1,0],reels_spun[2,0],3];
 					break;
 			case 3: Draw_Slot_Position(_highlight,0,0,2);
 					Draw_Slot_Position(_highlight,0,1,2);
 					Draw_Slot_Position(_highlight,0,2,2);
-					global.Dungeon = [reels_spun[0,2],reels_spun[1,2],reels_spun[2,2]];
+					global.Dungeon = [reels_spun[0,2],reels_spun[1,2],reels_spun[2,2],3];
 					break;
 			case 4: Draw_Slot_Position(_highlight,0,0,0);
 					Draw_Slot_Position(_highlight,0,1,1);
 					Draw_Slot_Position(_highlight,0,2,2);
-					global.Dungeon = [reels_spun[0,0],reels_spun[1,1],reels_spun[2,2]];
+					global.Dungeon = [reels_spun[0,0],reels_spun[1,1],reels_spun[2,2],3];
 					break;		
 			case 5: Draw_Slot_Position(_highlight,0,0,2);
 					Draw_Slot_Position(_highlight,0,1,1);
 					Draw_Slot_Position(_highlight,0,2,0);
-					global.Dungeon = [reels_spun[0,2],reels_spun[1,1],reels_spun[2,0]];
+					global.Dungeon = [reels_spun[0,2],reels_spun[1,1],reels_spun[2,0],3];
 					break;		
 		}
 		if (!global.gamepaused) anim_timer--; //pause animation with pause

@@ -9,7 +9,7 @@ if !global.gamepaused{
 			pay_anim =true; 
 			anim_timer = 60;
 			spin_lock = true;
-			global.money -= (spin_cost * power(2,active_total-1)); //pay active cost
+			global.money -= (spin_cost + (spin_cost*(active_total-1))); //pay active cost
 		}else {no_money = true; msg_timer = 60;} //else, prompt message
 	}
 

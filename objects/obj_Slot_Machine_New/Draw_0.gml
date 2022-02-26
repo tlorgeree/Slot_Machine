@@ -139,7 +139,7 @@ if (pay_anim) && (!spin_anim){
 			for (var w = 0; w<array_length(_weapon);++w){
 				if(_weapon[w]>0){
 					switch(w){
-						case WEAPON.SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (1*(_weapon[WEAPON.SWORD]-1)));
+						case WEAPON.SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (2*(_weapon[WEAPON.SWORD]-1)));
 						break;
 					}
 				}
@@ -160,6 +160,10 @@ if (pay_anim) && (!spin_anim){
 		switch(slot_mode){
 			case SLOT_MODE.BATTLE: 
 				if(p_turn){
+					show_debug_message("Damage payout is: " + string(global.Damage_Payout));
+					show_debug_message("Monster hp pre-damage" + string(obj_Monster_Parent.hp))
+					show_debug_message("Monster hp pre-damage" + string(obj_Monster_Parent.hp - global.Damage_Payout))
+					obj_Monster_Parent.hp -= global.Damage_Payout;
 					obj_Monster_Parent.is_turn = true;
 					p_turn = false;
 				}

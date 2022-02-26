@@ -35,6 +35,13 @@ if(spawn == true){
 			}
 			slot_mode = SLOT_MODE.BATTLE;
 			break;
+		case DUN_SYMBOL.BOSS: _choice = irandom(global.mon_boss_num-1);
+			switch(_choice){
+				case MON_BOSS.EYE: _to_spawn = obj_Monster_Eyeball_Boss;
+				break;
+			}
+			slot_mode = SLOT_MODE.BATTLE;
+			break;
 	}
 
 	instance_create_layer(obj_Spawner.x, obj_Spawner.y,"Spawns", _to_spawn);
