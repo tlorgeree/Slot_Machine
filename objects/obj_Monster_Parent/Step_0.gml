@@ -1,8 +1,13 @@
 /// @desc
 if (hp <= 0){
-	global.room_change = true;
+	if(global.room_curr < 3) global.room_change = true;
+	else{
+		global.room_curr = -1;
+		room_goto(rm_Dungeon_Slot)
+	}
 	obj_Slot_Machine_New.slot_mode = SLOT_MODE.NULL;
 	instance_destroy();
+
 }
 if(is_turn){
 	show_debug_message("I'M ALIVE AND ABLE TO DO");

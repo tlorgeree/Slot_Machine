@@ -3,6 +3,7 @@ if(global.room_change){
 	global.curr_room_complete = true;
 	if(global.room_curr == 3){
 		room_goto(rm_Dungeon_Slot);
+		global.room_curr = -1;
 	}else{
 		++global.room_curr;
 
@@ -16,7 +17,6 @@ if(global.room_change){
 	global.room_change = false;
 	//Reset Temp vairables
 	global.Defenses = 0;
-
 	show_debug_message("Room is: "+ string(global.room_curr));
 	var _to_spawn;
 	var _choice;
