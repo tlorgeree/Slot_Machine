@@ -1,8 +1,9 @@
 /// @desc
 
 draw_text(20,20, "Money: " + string(global.money));
-draw_text(20,35, "Spin: SPACE");
-draw_text(20,50, "Pause: Esc");
+draw_text(20,35, "Defenses: " + string(global.Defenses));
+draw_text(20,50, "Spin: SPACE");
+draw_text(20,65, "Pause: Esc");
 
 draw_set_halign(fa_center);
 draw_text(view_wport[0]/2,20, "Last Money Payout: " + string(global.Money_Payout));

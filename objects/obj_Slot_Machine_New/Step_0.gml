@@ -1,15 +1,19 @@
-if !global.gamepaused{	
+if !global.gamepaused{
+	cost_total = spin_cost + (spin_cost*(active_total-1));
+	
 	//Control Machine Spin
 	//Hit spacebar to start the spin
 	if (keyboard_check_pressed(vk_space) && (!spin_lock) && !spin_anim && !pay_anim && (active_total>0)){
-		if (global.money) >= spin_cost * power(2,active_total-1){ //if player can afford
+		show_debug_message("Max spin total is :" + string(cost_total));
+		show_debug_message("Number of enemies: " + string(instance_number(obj_Monster_Parent)));
+		if (global.money) >= cost_total{ //if player can afford
 			spin_state = true; //will calc spin
 			setup = false; //no longer change active rows
 			calc_done = false; //in spin calculation
 			pay_anim =true; 
 			anim_timer = 60;
 			spin_lock = true;
-			global.money -= (spin_cost + (spin_cost*(active_total-1))); //pay active cost
+			global.money -= cost_total; //pay active cost
 		}else {no_money = true; msg_timer = 60;} //else, prompt message
 	}
 
@@ -110,7 +114,6 @@ if !global.gamepaused{
 		global.Damage_Payout = 0;
 		global.Defense_Payout = 0;
 		global.Money_Payout = 0;
-		show_debug_message(string(payout));
 	}
 	
 	//reset variables and change # active rows

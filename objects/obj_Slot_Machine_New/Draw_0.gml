@@ -121,17 +121,15 @@ if (pay_anim) && (!spin_anim){
 		if (anim_timer<=0){ //if done animating, check next row
 			anim_ind++;
 			anim_timer = 60;
-			show_debug_message("Money array: " + string(_money));
-			show_debug_message("Weapon array: " + string(_weapon));
-			show_debug_message("Defense array: " + string(_defense));
 			//Apply payout wins
 			//MONEY payouts
 			for (var c = 0; c<array_length(_money);++c){
 				if(_money[c]>0){
 					switch(c){
-						case MONEY.COIN: global.Money_Payout += (400*_money[MONEY.COIN] + (200*(_money[MONEY.COIN]-1)));
-						global.money += (400*_money[MONEY.COIN] + (200*(_money[MONEY.COIN]-1)));
-						break;
+						case MONEY.COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.COIN]
+						+ (2*spin_cost*(_money[MONEY.COIN]-1)));
+						global.money += (2*spin_cost*_money[MONEY.COIN] + (spin_cost*(_money[MONEY.COIN]-1)));
+							break;
 					}
 				}
 			}
@@ -140,7 +138,7 @@ if (pay_anim) && (!spin_anim){
 				if(_weapon[w]>0){
 					switch(w){
 						case WEAPON.SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (2*(_weapon[WEAPON.SWORD]-1)));
-						break;
+							break;
 					}
 				}
 			}
@@ -149,7 +147,8 @@ if (pay_anim) && (!spin_anim){
 				if _defense[d]>0{
 					switch(d){
 						case DEFENSE.SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.SHIELD] + (1*(_defense[DEFENSE.SHIELD]-1)));
-						break;
+							global.Defenses += global.Defense_Payout;
+							break;
 					}
 				}
 			}
@@ -165,6 +164,7 @@ if (pay_anim) && (!spin_anim){
 					show_debug_message("Monster hp pre-damage" + string(obj_Monster_Parent.hp - global.Damage_Payout))
 					obj_Monster_Parent.hp -= global.Damage_Payout;
 					obj_Monster_Parent.is_turn = true;
+					obj_Monster_Parent.acted = false;
 					p_turn = false;
 				}
 				

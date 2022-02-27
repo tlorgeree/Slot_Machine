@@ -6,9 +6,11 @@ global.rooms_completed = 0;
 global.meta_currency = 0;
 global.curr_room_complete = false;
 global.player_turn = true;
+global.room_change = false;
 
 global.gamepaused = false;
-global.money = 10000;
+global.money = 100;
+global.Defenses = 0;
 global.Dungeon = [0,0,0];
 global.room_curr = -1;
 global.dungeon_calc = false;

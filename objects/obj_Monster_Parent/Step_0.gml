@@ -1,16 +1,22 @@
 /// @desc
 if (hp <= 0){
-	global.curr_room_complete = true;
-	if(global.room_curr == 3){
-		room_goto(rm_Dungeon_Slot);
-	}
-	else{
-		++global.room_curr;
-		++global.rooms_completed;
-	}
-	if (instance_exists(obj_Slot_Machine_New)){
-		obj_Slot_Machine_New.slot_mode = SLOT_MODE.NULL;
-	}
+	global.room_change = true;
+	obj_Slot_Machine_New.slot_mode = SLOT_MODE.NULL;
 	instance_destroy();
-	obj_Slot_Machine_New.spawn = true;
 }
+if(is_turn){
+	show_debug_message("I'M ALIVE AND ABLE TO DO");
+	show_debug_message(string(acted));
+	show_debug_message(string(state));
+	if (!acted && state == -1){
+		show_debug_message("I'm ready to attack");
+		state = Monster_State_Attack; 
+	}
+	if(acted){
+		is_turn = false;
+
+	}
+}
+
+if((state != -1) && (!acted)) script_execute(state);
+

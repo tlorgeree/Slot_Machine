@@ -24,7 +24,6 @@ last_spin[2] = reels[2];
 screen_coordx = 171;
 screen_coordy = 72;
 instance_create_layer(screen_coordx,screen_coordy,"Instances",obj_Spawner);
-spawn = true;
 #endregion
 
 #region Room_Mode
@@ -33,7 +32,7 @@ p_turn = true;
 #endregion
 
 #region Slot Controller Variables
-spin_cost = 500; //Cost of 1 spin
+spin_cost = 2; //Cost of 1 spin
 active = [0,0,0,0,0]; //#active rows
 active_total = 0;//for slot cost calc
 active_calc = 0;//recalculate active slots

@@ -6,7 +6,7 @@ if !(global.gamepaused) && (!obj_Slot_Machine_New.spin_lock){
 		id.active = !id.active;
 		if (active){
 			with (obj_Slot_Machine_New){//update slot_machine
-				if (global.money) >= spin_cost * power(2,active_total){
+				if (global.money) >= spin_cost + (spin_cost*(active_total)){
 					active[other.arrow_num-1] = true;
 					other.image_index = 1;
 				}
