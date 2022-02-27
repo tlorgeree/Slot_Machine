@@ -5,6 +5,7 @@ if(global.room_change){
 		room_goto(rm_Dungeon_Slot);
 	}else{
 		++global.room_curr;
+
 		if (global.room_curr!=0){
 			++global.rooms_completed;
 		}

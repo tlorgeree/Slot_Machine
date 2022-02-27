@@ -26,7 +26,8 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"hp_max","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"5 + global.rooms_completed","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hp_max","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"3 + global.rooms_completed","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"damage","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"2 + ( global.rooms_completed)","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Monsters",
