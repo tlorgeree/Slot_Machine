@@ -24,6 +24,17 @@ global.mon_basic_num = 1;
 global.mon_elite_num = 1;
 global.mon_boss_num = 1;
 
+global.Main_Reel_Layout[0] = [[TYPE.BLANK,BLANK.BASE],[TYPE.MONEY,MONEY.COIN],
+[TYPE.WEAPON,WEAPON.SWORD],[TYPE.DEFENSE,DEFENSE.SHIELD]];
+global.Main_Reel_Layout[1] = [[TYPE.DEFENSE,DEFENSE.SHIELD],[TYPE.WEAPON,WEAPON.SWORD],
+[TYPE.MONEY,MONEY.COIN],[TYPE.BLANK,BLANK.BASE]];
+global.Main_Reel_Layout[2] = [[TYPE.MONEY,MONEY.COIN],[TYPE.DEFENSE,DEFENSE.SHIELD],
+[TYPE.BLANK,BLANK.BASE],[TYPE.WEAPON,WEAPON.SWORD]];
+
+global.Dungeon_Reel_Layout[0] = [1,1,2];
+global.Dungeon_Reel_Layout[1] = [1,2,1];
+global.Dungeon_Reel_Layout[2] = [2,1,1];
+
 #region Resolution Scaling
 
 global.res_set = {

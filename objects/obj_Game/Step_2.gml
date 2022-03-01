@@ -31,3 +31,19 @@ if (keyboard_check_pressed(ord("P"))){
 	global.res_set.Resize_Large();
 	alarm[0] = 2;//1 frame doesn't catch the full screen exit
 }
+//Save Game
+if(keyboard_check_pressed(ord("S"))){
+	instance_create_layer(x,y,"Managers",obj_Save_System);
+}
+//Load Game
+if(keyboard_check_pressed(ord("L"))){
+	instance_create_layer(x,y,"Managers",obj_Load_System);
+}
+//Delete Save File
+if(keyboard_check_pressed(ord("D"))){
+	if(file_exists("Save_File.save")){
+		file_delete("Save_File.save");
+		show_debug_message("Deleted the save file.");
+	}
+	else show_debug_message("There was no save file to delete");
+}
