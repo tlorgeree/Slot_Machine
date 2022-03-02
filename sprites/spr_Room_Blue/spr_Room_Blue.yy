@@ -138,7 +138,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Room_Blue","path":"sprites/spr_Room_Blue/spr_Room_Blue.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Room_Blue",
     "tags": [],
     "resourceType": "GMSequence",

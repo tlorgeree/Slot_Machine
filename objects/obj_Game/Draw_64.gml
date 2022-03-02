@@ -1,5 +1,5 @@
 /// @desc
-if((room == rm_Dungeon_Slot) || (room == rm_Slot_Machine_New)){
+if(room == rm_Slot_Machine_New){
 	var _gui_w = display_get_gui_width();
 	var _gui_h = display_get_gui_height();
 	draw_text(20,20, "Money: " + string(global.money));

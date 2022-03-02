@@ -6,4 +6,4 @@ if (display_text){
 	draw_text_transformed(_gui_w/2,_gui_h*(4/5),"PRESS ENTER TO START",3,3,0);
 	draw_set_halign(fa_left);
 	draw_set_color(c_white);
-}
+} 

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Reel_Area_Tint","path":"sprites/spr_Reel_Area_Tint/spr_Reel_Area_Tint.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Reel_Area_Tint",
     "tags": [],
     "resourceType": "GMSequence",

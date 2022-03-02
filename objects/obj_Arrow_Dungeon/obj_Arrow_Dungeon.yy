@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Arror_Dungeon",
-    "path": "sprites/spr_Arror_Dungeon/spr_Arror_Dungeon.yy",
+    "name": "spr_Arrow_Side",
+    "path": "sprites/spr_Arrow_Side/spr_Arrow_Side.yy",
   },
   "solid": false,
   "visible": true,

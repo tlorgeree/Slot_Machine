@@ -8,7 +8,6 @@ draw_healthbar(x-half_spr_width,_y - 10, x+half_spr_width,_y,hp_bar,
 
 #region Messages
 if (attack_message){ //Tell player they can't afford the action
-	show_debug_message("Monster attack message happened");
 	draw_set_alpha(msg_timer/60);
 	draw_set_color(c_red);
 	draw_set_halign(fa_center);
