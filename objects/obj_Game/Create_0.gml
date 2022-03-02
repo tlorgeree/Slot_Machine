@@ -41,7 +41,7 @@ global.res_set = {
 	base_width : 256,
 	base_height : 144,
 	scale : 3,
-	aspect_ratio : display_get_gui_width()/display_get_height(),
+	aspect_ratio : display_get_width()/display_get_height(),
 	
 	Resize_Large : function(){
 		var base_ratio = base_width/base_height;
@@ -68,3 +68,5 @@ global.res_set = {
 	
 }
 #endregion
+global.res_set.Resize_Large();
+alarm[0] = 2;//1 frame doesn't catch the full screen exit
