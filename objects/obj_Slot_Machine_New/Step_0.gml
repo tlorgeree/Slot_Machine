@@ -1,4 +1,5 @@
 if !global.gamepaused{
+	
 	cost_total = spin_cost + (spin_cost*(active_total-1));
 	
 	//Control Machine Spin

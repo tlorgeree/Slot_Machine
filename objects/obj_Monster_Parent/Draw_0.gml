@@ -5,3 +5,20 @@ var _y = y - sprite_get_height(sprite_index)/2;
 var half_spr_width = sprite_get_width(sprite_index)/2;
 draw_healthbar(x-half_spr_width,_y - 10, x+half_spr_width,_y,hp_bar,
 	c_black,c_red,c_orange,0,1,1);
+
+#region Messages
+if (attack_message){ //Tell player they can't afford the action
+	show_debug_message("Monster attack message happened");
+	draw_set_alpha(msg_timer/60);
+	draw_set_color(c_red);
+	draw_set_halign(fa_center);
+	if (msg_timer > 0){
+		draw_text_transformed(room_width/2, room_height/2, "Monster Dealt " + string(damage) + " damage!", 1,1,0);
+		if (!global.gamepaused) msg_timer--;//pause timer with pause
+	}
+	else attack_message = false;
+	draw_set_color(c_white);
+	draw_set_halign(fa_left);
+	draw_set_alpha(1);
+}
+#endregion

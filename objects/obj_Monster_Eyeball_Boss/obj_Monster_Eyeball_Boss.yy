@@ -28,6 +28,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"hp_max","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"10+ (global.rooms_completed)","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"damage","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"2* (3 * global.rooms_completed)","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"reward","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"40","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Monsters",

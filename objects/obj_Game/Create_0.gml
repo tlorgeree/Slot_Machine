@@ -40,7 +40,7 @@ global.Dungeon_Reel_Layout[2] = [2,1,1];
 global.res_set = {
 	base_width : 256,
 	base_height : 144,
-	scale : 1,
+	scale : 3,
 	aspect_ratio : display_get_gui_width()/display_get_height(),
 	
 	Resize_Large : function(){

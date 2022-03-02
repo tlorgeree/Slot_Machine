@@ -1,4 +1,5 @@
 /// @desc
+if(keyboard_check_pressed(ord("R"))) show_debug_message(string(room_width) + " " +string(room_height));
 if(global.room_change){
 	global.curr_room_complete = true;
 	if(global.room_curr == 3){
