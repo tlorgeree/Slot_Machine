@@ -1,8 +1,8 @@
 /// @desc Draw Bag
 //Draw interior
 draw_self();
-if(current < global.money){
-	diff = global.money - current;
+if(current > global.money){
+	diff = current - global.money;
 	current = global.money
 }else current = global.money;
 //Draw contents
@@ -15,7 +15,7 @@ var _w = sprite_get_width(spr_Bag_Interior_Background);
 var _20s = floor(_contents/20);
 var _20r = _contents mod 20;
 var _20h = sprite_get_height(spr_UI_Coin_20)-4;
-show_debug_message(string(_20s));
+
 for (var i = 0; i<_20s; ++i){
 	var _20x = x - _w;
 	var _20y = y + _h - i* _20h;
@@ -24,8 +24,8 @@ for (var i = 0; i<_20s; ++i){
 }
 var _5s = floor(_20r/5);
 var _5r = _20r mod 5;
-var _5h = sprite_get_height(spr_UI_Coin_5)+4;
 var _5w = sprite_get_width(spr_UI_Coin_5);
+var _5h = sprite_get_width(spr_UI_Coin_5);
 
 for (var i = 0; i<_5s; ++i){
 	var _5x = x - _w + (i*_5w);
@@ -46,7 +46,17 @@ for (var i = 0; i<_1s; ++i){
 	
 	draw_sprite(spr_UI_Coin_1,0,_1x, _1y);
 }
-
+if(diff>0)show_debug_message("There was a diff");
+for(i = 0; i<diff; ++i){
+	if(_1s>0){
+	instance_create_layer(_1x,_1y,"Spawns",obj_UI_Coin);
+	}else{
+		if (_5s>0) instance_create_layer(_5x,_5y,"Spawns",obj_UI_Coin);
+		else if (_20s>0) instance_create_layer(_20x,_20y,"Spawns",obj_UI_Coin);
+		else instance_create_layer(x, y,"Spawns",obj_UI_Coin);
+	}
+	diff--;
+}
 
 //Draw the border
 draw_sprite(spr_Bag_Border,0,x,y);

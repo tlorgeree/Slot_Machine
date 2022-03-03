@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Bag_Interior_Background",
-    "path": "sprites/spr_Bag_Interior_Background/spr_Bag_Interior_Background.yy",
+    "name": "spr_UI_Coin_Flip",
+    "path": "sprites/spr_UI_Coin_Flip/spr_UI_Coin_Flip.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,8 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Managers/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_Coin_Bag_UI",
+  "name": "obj_UI_Coin",
   "tags": [],
   "resourceType": "GMObject",
 }
