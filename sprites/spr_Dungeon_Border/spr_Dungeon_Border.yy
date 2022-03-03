@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Dungeon_Border","path":"sprites/spr_Dungeon_Border/spr_Dungeon_Border.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Dungeon_Border",
     "tags": [],
     "resourceType": "GMSequence",

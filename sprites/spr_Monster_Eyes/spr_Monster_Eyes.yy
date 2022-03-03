@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Monster_Eyes","path":"sprites/spr_Monster_Eyes/spr_Monster_Eyes.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Monster_Eyes",
     "tags": [],
     "resourceType": "GMSequence",

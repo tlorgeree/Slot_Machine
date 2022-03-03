@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Elite_Eyes","path":"sprites/spr_Elite_Eyes/spr_Elite_Eyes.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Elite_Eyes",
     "tags": [],
     "resourceType": "GMSequence",

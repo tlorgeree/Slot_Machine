@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Slot_Frame","path":"sprites/spr_Slot_Frame/spr_Slot_Frame.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Slot_Frame",
     "tags": [],
     "resourceType": "GMSequence",

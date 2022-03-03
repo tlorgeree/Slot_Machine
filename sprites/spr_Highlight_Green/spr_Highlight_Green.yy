@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Highlight_Green","path":"sprites/spr_Highlight_Green/spr_Highlight_Green.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Highlight_Green",
     "tags": [],
     "resourceType": "GMSequence",

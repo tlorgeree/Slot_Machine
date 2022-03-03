@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Mockup","path":"sprites/spr_Mockup/spr_Mockup.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Mockup",
     "tags": [],
     "resourceType": "GMSequence",

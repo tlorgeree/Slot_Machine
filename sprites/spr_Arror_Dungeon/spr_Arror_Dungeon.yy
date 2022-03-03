@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Arror_Dungeon","path":"sprites/spr_Arror_Dungeon/spr_Arror_Dungeon.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Arror_Dungeon",
     "tags": [],
     "resourceType": "GMSequence",

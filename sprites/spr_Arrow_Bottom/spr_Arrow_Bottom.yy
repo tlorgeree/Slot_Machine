@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Arrow_Bottom","path":"sprites/spr_Arrow_Bottom/spr_Arrow_Bottom.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Arrow_Bottom",
     "tags": [],
     "resourceType": "GMSequence",

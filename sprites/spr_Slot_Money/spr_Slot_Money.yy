@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Slot_Money","path":"sprites/spr_Slot_Money/spr_Slot_Money.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Slot_Money",
     "tags": [],
     "resourceType": "GMSequence",

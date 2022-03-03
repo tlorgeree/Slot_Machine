@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Arror_Dungeon_Angled","path":"sprites/spr_Arror_Dungeon_Angled/spr_Arror_Dungeon_Angled.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Arror_Dungeon_Angled",
     "tags": [],
     "resourceType": "GMSequence",

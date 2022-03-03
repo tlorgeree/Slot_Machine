@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Boss_Eyes","path":"sprites/spr_Boss_Eyes/spr_Boss_Eyes.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Boss_Eyes",
     "tags": [],
     "resourceType": "GMSequence",

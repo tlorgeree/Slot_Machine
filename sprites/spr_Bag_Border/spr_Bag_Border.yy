@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Bag_Border","path":"sprites/spr_Bag_Border/spr_Bag_Border.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "spr_Bag_Border",
     "tags": [],
     "resourceType": "GMSequence",
