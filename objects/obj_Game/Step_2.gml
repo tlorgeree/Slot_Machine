@@ -47,3 +47,6 @@ if(keyboard_check_pressed(ord("D"))){
 	}
 	else show_debug_message("There was no save file to delete");
 }
+
+if (keyboard_check_pressed(ord("N"))) global.money--;
+if (keyboard_check_pressed(ord("M"))) global.money++;

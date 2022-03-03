@@ -35,6 +35,10 @@ global.Dungeon_Reel_Layout[0] = [1,1,2];
 global.Dungeon_Reel_Layout[1] = [1,2,1];
 global.Dungeon_Reel_Layout[2] = [2,1,1];
 
+#region Shop
+global.shop = [WEAPON.SWORD, DEFENSE.SHIELD, MONEY.COIN]
+#endregion
+
 #region Resolution Scaling
 
 global.res_set = {
