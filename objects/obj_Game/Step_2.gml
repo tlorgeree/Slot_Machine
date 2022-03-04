@@ -51,5 +51,8 @@ if(keyboard_check_pressed(ord("D"))){
 
 //Test Room
 if (keyboard_check_pressed(ord("T"))){
-	room_goto(rm_Wheel_Test)
+	room_goto(rm_Wheel_Test);
+}
+if (keyboard_check_pressed(ord("M"))){
+	global.money--;
 }
