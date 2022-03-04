@@ -34,13 +34,16 @@ enum EVENT{
 	ALTAR = 0
 }
 enum MON_BASIC{
-	EYE = 0
+	EYE = 0,
+	SLIME = 1,
 }	
 enum MON_ELITE{
-	EYE = 0
+	EYE = 0,
+	SLIME = 1,
 }
 enum MON_BOSS{
-	EYE = 0
+	EYE = 0,
+	SLIME = 1,
 }
 
 //Slot Modes

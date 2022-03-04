@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Reel_Area","path":"sprites/spr_Reel_Area/spr_Reel_Area.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Reel_Area",
     "tags": [],
     "resourceType": "GMSequence",

@@ -32,7 +32,7 @@ if (keyboard_check_pressed(ord("P"))){
 	alarm[0] = 2;//1 frame doesn't catch the full screen exit
 }
 //Save Game
-if(keyboard_check_pressed(ord("S"))){
+/*if(keyboard_check_pressed(ord("S"))){
 	instance_create_layer(x,y,"Managers",obj_Save_System);
 }
 //Load Game
@@ -46,7 +46,10 @@ if(keyboard_check_pressed(ord("D"))){
 		show_debug_message("Deleted the save file.");
 	}
 	else show_debug_message("There was no save file to delete");
-}
+}*/
 
-if (keyboard_check_pressed(ord("N"))) global.money--;
-if (keyboard_check_pressed(ord("M"))) global.money++;
+
+//Test Room
+if (keyboard_check_pressed(ord("T"))){
+	room_goto(rm_Wheel_Test)
+}

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Slot_Grid","path":"sprites/spr_Slot_Grid/spr_Slot_Grid.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Slot_Grid",
     "tags": [],
     "resourceType": "GMSequence",

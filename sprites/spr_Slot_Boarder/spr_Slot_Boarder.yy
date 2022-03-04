@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Slot_Boarder","path":"sprites/spr_Slot_Boarder/spr_Slot_Boarder.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Slot_Boarder",
     "tags": [],
     "resourceType": "GMSequence",

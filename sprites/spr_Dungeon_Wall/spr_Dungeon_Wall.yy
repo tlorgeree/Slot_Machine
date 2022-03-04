@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Dungeon_Wall","path":"sprites/spr_Dungeon_Wall/spr_Dungeon_Wall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Dungeon_Wall",
     "tags": [],
     "resourceType": "GMSequence",

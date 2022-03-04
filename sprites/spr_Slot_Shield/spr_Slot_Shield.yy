@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Slot_Shield","path":"sprites/spr_Slot_Shield/spr_Slot_Shield.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Slot_Shield",
     "tags": [],
     "resourceType": "GMSequence",

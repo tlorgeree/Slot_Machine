@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_UI_Coin_Flip","path":"sprites/spr_UI_Coin_Flip/spr_UI_Coin_Flip.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_UI_Coin_Flip",
     "tags": [],
     "resourceType": "GMSequence",

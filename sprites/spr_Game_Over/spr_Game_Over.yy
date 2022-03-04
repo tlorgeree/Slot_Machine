@@ -375,7 +375,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Game_Over","path":"sprites/spr_Game_Over/spr_Game_Over.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Game_Over",
     "tags": [],
     "resourceType": "GMSequence",

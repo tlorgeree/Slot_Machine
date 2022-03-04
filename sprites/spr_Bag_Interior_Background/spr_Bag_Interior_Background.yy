@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Bag_Interior_Background","path":"sprites/spr_Bag_Interior_Background/spr_Bag_Interior_Background.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Bag_Interior_Background",
     "tags": [],
     "resourceType": "GMSequence",

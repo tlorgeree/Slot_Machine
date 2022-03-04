@@ -34,6 +34,8 @@ if(global.room_change){
 			switch(_choice){
 				case MON_BASIC.EYE: _to_spawn = obj_Monster_Eyeball;
 					break;
+				case MON_BASIC.SLIME: _to_spawn = obj_Monster_Slime;
+					break;
 			}
 			obj_Slot_Machine_New.slot_mode = SLOT_MODE.BATTLE;
 			break;
@@ -42,13 +44,17 @@ if(global.room_change){
 			switch(_choice){
 				case MON_ELITE.EYE: _to_spawn = obj_Monster_Elite_Eyeball;
 					break;
+				case MON_ELITE.SLIME: _to_spawn = obj_Elite_Slime;
+					break;
 			}
 			obj_Slot_Machine_New.slot_mode = SLOT_MODE.BATTLE;
 			break;
 		case DUN_SYMBOL.BOSS: _choice = irandom(global.mon_boss_num-1);
 			switch(_choice){
 				case MON_BOSS.EYE: _to_spawn = obj_Monster_Eyeball_Boss;
-				break;
+					break;
+				case MON_BOSS.SLIME: _to_spawn = obj_Boss_Slime;
+					break;
 			}
 			obj_Slot_Machine_New.slot_mode = SLOT_MODE.BATTLE;
 			break;

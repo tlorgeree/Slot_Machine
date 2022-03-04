@@ -20,9 +20,9 @@ global.Damage_Payout = 0;
 global.Defense_Payout = 0;
 
 global.event_num = 1;
-global.mon_basic_num = 1;
-global.mon_elite_num = 1;
-global.mon_boss_num = 1;
+global.mon_basic_num = 2;
+global.mon_elite_num = 2;
+global.mon_boss_num = 2;
 
 global.Main_Reel_Layout[0] = [[TYPE.BLANK,BLANK.BASE],[TYPE.MONEY,MONEY.COIN],
 [TYPE.WEAPON,WEAPON.SWORD],[TYPE.DEFENSE,DEFENSE.SHIELD]];

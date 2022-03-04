@@ -31,8 +31,8 @@
     {"propertyId":{"name":"reward","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"40","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Monsters",
-    "path": "folders/Objects/Monsters.yy",
+    "name": "Eyeball",
+    "path": "folders/Objects/Monsters/Eyeball.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_Monster_Eyeball_Boss",

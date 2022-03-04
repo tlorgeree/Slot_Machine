@@ -239,7 +239,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Title_Screen","path":"sprites/spr_Title_Screen/spr_Title_Screen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Title_Screen",
     "tags": [],
     "resourceType": "GMSequence",

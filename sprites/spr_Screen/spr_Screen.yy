@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Screen","path":"sprites/spr_Screen/spr_Screen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Screen",
     "tags": [],
     "resourceType": "GMSequence",
