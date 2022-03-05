@@ -50,6 +50,7 @@ if (pay_anim) && (!spin_anim){
 			anim_ind++;
 			anim_timer = 60;
 			global.dungeon_calc = true;
+			global.Manager = instance_create_layer(x,y,"Instances",obj_Reel_Manager);
 		}
 	}else Reset_Slot_State();
 	

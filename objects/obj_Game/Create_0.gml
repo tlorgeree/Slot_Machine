@@ -1,4 +1,5 @@
 /// @desc globals
+show_message("A game was born");
 randomise();
 display_set_gui_size(view_wport[0],view_hport[0]);
 
@@ -7,6 +8,7 @@ global.meta_currency = 0;
 global.curr_room_complete = false;
 global.player_turn = true;
 global.room_change = false;
+global.Manager = -1;
 
 global.gamepaused = false;
 global.money = 100;
@@ -31,13 +33,15 @@ global.Main_Reel_Layout[1] = [[TYPE.DEFENSE,DEFENSE.SHIELD],[TYPE.WEAPON,WEAPON.
 global.Main_Reel_Layout[2] = [[TYPE.MONEY,MONEY.COIN],[TYPE.DEFENSE,DEFENSE.SHIELD],
 [TYPE.BLANK,BLANK.BASE],[TYPE.WEAPON,WEAPON.SWORD]];
 
-global.Main_Reel_Saved[0] = global.Main_Reel_Layout[0]
-global.Main_Reel_Saved[1] = global.Main_Reel_Layout[1]
-global.Main_Reel_Saved[2] = global.Main_Reel_Layout[2]
+global.Main_Reel_Curr[0] = global.Main_Reel_Layout[0]
+global.Main_Reel_Curr[1] = global.Main_Reel_Layout[1]
+global.Main_Reel_Curr[2] = global.Main_Reel_Layout[2]
 
 global.Dungeon_Reel_Layout[0] = [1,1,2];
 global.Dungeon_Reel_Layout[1] = [1,2,1];
 global.Dungeon_Reel_Layout[2] = [2,1,1];
+
+global.Tile_Selection = -1;//For adding tiles
 
 #region Shop
 global.shop = [WEAPON.SWORD, DEFENSE.SHIELD, MONEY.COIN]

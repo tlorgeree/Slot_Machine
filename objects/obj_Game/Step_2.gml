@@ -9,9 +9,11 @@ if ((room == rm_Title) && (keyboard_check_pressed(vk_enter))){
 	room_goto(rm_Dungeon_Slot);
 }
 if (global.dungeon_calc){
-	room_goto(rm_Slot_Machine_New);
-	global.room_change = true;
-	global.dungeon_calc = false;
+	if(global.Manager == -1){
+		room_goto(rm_Slot_Machine_New);
+		global.room_change = true;
+		global.dungeon_calc = false;
+	}
 }
 
 if (room == rm_Slot_Machine_New) && (!obj_Slot_Machine_New.pay_anim)

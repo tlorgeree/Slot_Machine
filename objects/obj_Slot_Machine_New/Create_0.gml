@@ -6,9 +6,8 @@ spin_lock = false;
 slots = [-1,-1,-1]; //Holds ID values for each reel
 reel_num = 3; //number of reels in game
 symbol_num = 3;
-reels[0] = global.Main_Reel_Layout[0]; //reels[] stores the symbol data for each reel
-reels[1] = global.Main_Reel_Layout[1];
-reels[2] = global.Main_Reel_Layout[2];
+reels = global.Main_Reel_Curr; //reels[] stores the symbol data for each reel
+
 reels_spun[0] = reels[0]; //This is the resulting output from a spin
 reels_spun[1] = reels[1];
 reels_spun[2] = reels[2];
@@ -17,11 +16,7 @@ last_spin[1] = reels[1];
 last_spin[2] = reels[2];
 #endregion
 
-reel = ds_list_create();
-ds_list_add(reel, global.Main_Reel_Layout[0][0]);
-ds_list_add(reel, global.Main_Reel_Layout[0][1]);
-ds_list_add(reel, global.Main_Reel_Layout[0][2]);
-ds_list_add(reel, global.Main_Reel_Layout[0][3]);
+
 #region Spawner
 screen_coordx = 171;
 screen_coordy = 72;

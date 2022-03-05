@@ -52,3 +52,10 @@ enum SLOT_MODE{
 	BATTLE = 0,
 	EVENT = 1,
 }
+
+//Reel Manager
+enum MODE{
+	ADD = 0,
+	REMOVE = 1,
+	SWAP = 2,
+}
