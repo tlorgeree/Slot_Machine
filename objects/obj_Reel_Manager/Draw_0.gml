@@ -16,12 +16,18 @@ for(var i = 0; i < 3; ++i){//draw the 3 reels to screen
 		var _sym;
 		var jj = j + selected[i];
 		if(jj<0) jj = (reel_len[i]-1)+(selected[i] + j);
-		else if (jj > (reel_len[i]-1)) jj = (selected[i]+j) - (reel_len[i]-1);
-		var curr_draw = [];
-		curr_draw = global.Main_Reel_Layout[active][jj];
+		else if (jj > (reel_len[i]-1)) jj = (selected[i]+j) - (reel_len[i]);
+		var curr_draw = global.Main_Reel_Layout[active][jj];
 		var tile = spr_Tile;
 		if(jj == 0) tile = spr_Tile_First;
-		draw_sprite_ext(tile,0,_x,_y+(24*j),(3-abs(j))/3,(3-abs(j))/3,0,blend[i],1);
-		
+
+		switch(abs(j)){
+			case 0: draw_sprite_ext(tile,0,_x,_y,(3-abs(j))/3,(3-abs(j))/3,0,blend[i],1);
+				break;
+			case 1: draw_sprite_ext(tile,0,_x,_y + (20*j),(3-abs(j))/3,(3-abs(j))/3,0,blend[i],1);
+				break;
+			case 2: draw_sprite_ext(tile,0,_x,_y + (16*j),(3-abs(j))/3,(3-abs(j))/3,0,blend[i],1);
+				break;
+		}
 	}
 }
