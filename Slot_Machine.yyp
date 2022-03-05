@@ -38,6 +38,7 @@
     {"id":{"name":"spr_Slot_Gold","path":"sprites/spr_Slot_Gold/spr_Slot_Gold.yy",},"order":4,},
     {"id":{"name":"spr_Bag_Border","path":"sprites/spr_Bag_Border/spr_Bag_Border.yy",},"order":0,},
     {"id":{"name":"rm_Game_Over","path":"rooms/rm_Game_Over/rm_Game_Over.yy",},"order":3,},
+    {"id":{"name":"spr_Select_Outline","path":"sprites/spr_Select_Outline/spr_Select_Outline.yy",},"order":2,},
     {"id":{"name":"obj_Load_System","path":"objects/obj_Load_System/obj_Load_System.yy",},"order":8,},
     {"id":{"name":"obj_Event_Altar","path":"objects/obj_Event_Altar/obj_Event_Altar.yy",},"order":1,},
     {"id":{"name":"spr_Bag_Interior_Background","path":"sprites/spr_Bag_Interior_Background/spr_Bag_Interior_Background.yy",},"order":1,},
