@@ -17,6 +17,11 @@ last_spin[1] = reels[1];
 last_spin[2] = reels[2];
 #endregion
 
+reel = ds_list_create();
+ds_list_add(reel, global.Main_Reel_Layout[0][0]);
+ds_list_add(reel, global.Main_Reel_Layout[0][1]);
+ds_list_add(reel, global.Main_Reel_Layout[0][2]);
+ds_list_add(reel, global.Main_Reel_Layout[0][3]);
 #region Spawner
 screen_coordx = 171;
 screen_coordy = 72;

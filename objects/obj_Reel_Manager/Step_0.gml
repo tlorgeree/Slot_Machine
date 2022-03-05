@@ -13,7 +13,7 @@ if(keyboard_check_pressed(ord("S"))){
 //Change which Reel is active
 if(keyboard_check_pressed(ord("D"))){
 	active++;
-	if (active >= 2) active = 0;
+	if (active > 2) active = 0;
 }
 if(keyboard_check_pressed(ord("A"))){
 	active--;

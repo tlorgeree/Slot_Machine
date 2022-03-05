@@ -31,6 +31,10 @@ global.Main_Reel_Layout[1] = [[TYPE.DEFENSE,DEFENSE.SHIELD],[TYPE.WEAPON,WEAPON.
 global.Main_Reel_Layout[2] = [[TYPE.MONEY,MONEY.COIN],[TYPE.DEFENSE,DEFENSE.SHIELD],
 [TYPE.BLANK,BLANK.BASE],[TYPE.WEAPON,WEAPON.SWORD]];
 
+global.Main_Reel_Saved[0] = global.Main_Reel_Layout[0]
+global.Main_Reel_Saved[1] = global.Main_Reel_Layout[1]
+global.Main_Reel_Saved[2] = global.Main_Reel_Layout[2]
+
 global.Dungeon_Reel_Layout[0] = [1,1,2];
 global.Dungeon_Reel_Layout[1] = [1,2,1];
 global.Dungeon_Reel_Layout[2] = [2,1,1];
@@ -73,4 +77,4 @@ global.res_set = {
 }
 #endregion
 global.res_set.Resize_Large();
-alarm[0] = 2;//1 frame doesn't catch the full screen exit
+alarm[0] = 1;//1 frame doesn't catch the full screen exit
