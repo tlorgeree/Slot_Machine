@@ -1,5 +1,5 @@
 /// @desc Draw the reels to the screens
-draw_set_alpha(0.1);
+draw_set_alpha(0.8);
 draw_rectangle_color(0,0,2*room_x,2*room_y,c_dkgray,c_dkgray,c_dkgray,c_dkgray,0);
 draw_set_alpha(1);
 if(!picking){
@@ -69,25 +69,47 @@ if(!picking){
 	if(menu_picking){
 		var blend = [c_grey,c_grey,c_grey];
 		blend[menu_sel] = c_white;
-		var _sym;
+		var _sym,_text;
 		for(var p =0;p<3;p++){	
 			switch(p){
 				case 0: _x = room_x*(0.5); _y = room_y;
 					_sym = spr_UI_Add;
+					_text = "Add a new Symbol";
 					break;
 				case 1: _x = room_x; _y = room_y;
 					_sym = spr_UI_Swap;
+					_text = "Swap a Symbol";
 					break;
 				case 2: _x = room_x*(1.5); _y = room_y;
 					_sym = spr_UI_Leave;
+					_text = "Exit the shop"
 					break;
 			}
 			draw_sprite_ext(spr_Tile,0,_x,_y,1,1,0,blend[p],1);//Draw back tile
 			draw_sprite_ext(_sym,0,_x,_y,1,1,0,blend[p],1);//Draw back tiles
+			draw_set_halign(fa_center);
+			draw_set_color(c_red);
+			if (p == menu_sel) draw_text(room_x,room_y/4,_text);
+			draw_set_halign(fa_left);
+			draw_set_color(c_white);
 		}
 	}
 	else{
 		var blend = [c_grey,c_grey,c_grey];
+		var _text;
+		switch(mode){
+			case MODE.ADD:_text = "Add a\n";
+				break;
+			case MODE.SWAP:_text = "Swap with a\n";
+				break;
+			case MODE.REMOVE:_text = "Remove a\n";
+				break;
+		}
+		switch(pick_sel){
+			case 0: _text += "Money Symbol";break;
+			case 1: _text += "Weapon Symbol";break;
+			case 2: _text += "Defense Symbol";break;
+		}
 		blend[pick_sel] = c_white;
 		for(var p =0;p<3;p++){	
 			switch(p){
@@ -118,8 +140,13 @@ if(!picking){
 				}break;
 			}
 			draw_sprite_ext(_symb,0,_x,_y,1,1,0,blend[p],1);//Draw back tiles
-
+			draw_set_halign(fa_center);
+			draw_set_color(c_red);
+			if (p == pick_sel) draw_text(room_x,room_y/4,_text);
+			draw_set_halign(fa_left);
+			draw_set_color(c_white);
 		}
+		
 	}
 	
 }

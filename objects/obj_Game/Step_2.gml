@@ -49,12 +49,3 @@ if(keyboard_check_pressed(ord("D"))){
 	}
 	else show_debug_message("There was no save file to delete");
 }*/
-
-
-//Test Room
-if (keyboard_check_pressed(ord("T"))){
-	room_goto(rm_Wheel_Test);
-}
-if (keyboard_check_pressed(ord("M"))){
-	global.money--;
-}

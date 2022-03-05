@@ -1,5 +1,4 @@
 /// @desc globals
-show_message("A game was born");
 randomise();
 display_set_gui_size(view_wport[0],view_hport[0]);
 

@@ -3,7 +3,6 @@
 if !(global.gamepaused){
 	if mouse_check_button_pressed(mb_left) 
 	&& position_meeting(mouse_x, mouse_y, id){
-		//show_message(string(arrow_num)); 
 		if (!active){
 			with (obj_Dungeon_Slot){//update slot_machine
 				
