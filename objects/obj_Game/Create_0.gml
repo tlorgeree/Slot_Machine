@@ -15,6 +15,7 @@ global.Defenses = 0;
 global.Dungeon = [0,0,0];
 global.room_curr = -1;
 global.dungeon_calc = false;
+global.mon_reward = false;
 
 global.Money_Payout = 0;
 global.Damage_Payout = 0;
@@ -24,6 +25,10 @@ global.event_num = 1;
 global.mon_basic_num = 2;
 global.mon_elite_num = 2;
 global.mon_boss_num = 2;
+
+global.num_weapons = 1;
+global.num_defenses = 1;
+global.num_moneys = 1;
 
 global.Main_Reel_Layout[0] = [[TYPE.BLANK,BLANK.BASE],[TYPE.MONEY,MONEY.COIN],
 [TYPE.WEAPON,WEAPON.SWORD],[TYPE.DEFENSE,DEFENSE.SHIELD]];

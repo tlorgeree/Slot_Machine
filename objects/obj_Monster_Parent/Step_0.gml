@@ -2,7 +2,10 @@
 if (hp <= 0){
 	state = -1;
 	is_turn = false;
-	if(global.room_curr < 3) global.room_change = true;
+	if(global.room_curr < 3){ 
+		global.room_change = true;
+		global.mon_reward = true;
+	}
 	else{
 		global.room_curr = -1;
 		room_goto(rm_Dungeon_Slot)

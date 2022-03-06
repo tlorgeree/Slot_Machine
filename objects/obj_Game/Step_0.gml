@@ -1,6 +1,11 @@
 /// @desc
 if(keyboard_check_pressed(ord("R"))) show_debug_message(string(room_width) + " " +string(room_height));
 if(global.room_change){
+	//Do Rewards
+	if(global.mon_reward){
+		Monster_Reward(global.Dungeon[global.room_curr]);
+		global.mon_reward = false;
+	}
 	global.curr_room_complete = true;
 	if(global.room_curr == 3){
 		room_goto(rm_Dungeon_Slot);

@@ -26,3 +26,17 @@ function Symbol_Swap(_reel,_index,_data){
 	}
 	global.Main_Reel_Curr[_reel] = temp_arr;
 }
+
+function Monster_Reward(rm_type){
+	with(instance_create_layer(x,y,"Instances",obj_Reel_Manager)){
+		menu_picking = false;
+		randomized = true;
+		mode = MODE.ADD;
+		var _items;
+		switch(rm_type){
+			case DUN_SYMBOL.RED: _items = 2; break;
+			case DUN_SYMBOL.BLUE: _items = 3;break;
+		}
+		num_items = _items;
+	}
+}

@@ -24,7 +24,7 @@ if (room == rm_Slot_Machine_New) && (!obj_Slot_Machine_New.pay_anim)
 }
 if ((room == rm_Game_Over) && (keyboard_check_pressed(vk_enter))){
 	room_goto(rm_Title);
-	global.Dungeon= [0,0,0,0];
+	global.Dungeon = [0,0,0,0];
 	global.room_curr = -1;
 	global.gamepaused = false;
 	global.money = 100;
