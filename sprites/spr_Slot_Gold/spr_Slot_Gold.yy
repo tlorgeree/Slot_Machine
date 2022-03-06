@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Main_Slot",
-    "path": "folders/Sprites/Main_Slot.yy",
+    "name": "Money",
+    "path": "folders/Sprites/Main_Slot/Money.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Slot_Gold",

@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 15,
-  "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_left": 1,
+  "bbox_right": 13,
+  "bbox_top": 3,
+  "bbox_bottom": 14,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},"LayerId":{"name":"60836e84-5db0-40d8-9aba-35d9535ef5f6","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_Slot_Sword","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},"resourceVersion":"1.0","name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},"LayerId":{"name":"60836e84-5db0-40d8-9aba-35d9535ef5f6","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Slot_Poison_Dagger","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},"resourceVersion":"1.0","name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_Slot_Sword","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},
+    "spriteId": {"name":"spr_Slot_Poison_Dagger","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"33229599-7b47-4aa4-8170-c96624f541d4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c2df3c83-ec7f-4f94-80a9-6f11965d7260","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"855280ee-8651-46e2-8332-6c1cc3fb6c3f","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_Slot_Sword","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},
+    "parent": {"name":"spr_Slot_Poison_Dagger","path":"sprites/spr_Slot_Poison_Dagger/spr_Slot_Poison_Dagger.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_Slot_Sword",
+    "name": "spr_Slot_Poison_Dagger",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Main_Slot/Weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_Slot_Sword",
+  "name": "spr_Slot_Poison_Dagger",
   "tags": [],
   "resourceType": "GMSprite",
 }

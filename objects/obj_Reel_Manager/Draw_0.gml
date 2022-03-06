@@ -19,7 +19,7 @@ if(!picking){
 		for(var j = -2; j <= 2; ++j){
 			var _sym;
 			var jj = j + selected[i];
-			if(jj<0) jj = (reel_len[i]-1)+(selected[i] + j);
+			if(jj<0) jj = (reel_len[i])+(selected[i] + j);
 			else if (jj > (reel_len[i]-1)) jj = (selected[i]+j) - (reel_len[i]);
 			var curr_draw = global.Main_Reel_Curr[i][jj];
 			var tile = spr_Tile;

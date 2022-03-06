@@ -51,9 +51,11 @@ for(i = 0; i<diff; ++i){
 	if(_1s>0){
 	instance_create_layer(_1x,_1y,"Spawns",obj_UI_Coin);
 	}else{
-		if (_5s>0) instance_create_layer(_5x,_5y,"Spawns",obj_UI_Coin);
-		else if (_20s>0) instance_create_layer(_20x,_20y,"Spawns",obj_UI_Coin);
-		else instance_create_layer(x, y,"Spawns",obj_UI_Coin);
+		var coin;
+		if (_5s>0) coin = instance_create_depth(_5x,_5y-_5h,depth,obj_UI_Coin);
+		else if (_20s>0) coin = instance_create_depth(_20x+(_w/2),_20y-_20h,depth,obj_UI_Coin);
+		else coin = instance_create_depth(x, y,depth,obj_UI_Coin);
+		coin.depth = -10000;
 	}
 	diff--;
 }

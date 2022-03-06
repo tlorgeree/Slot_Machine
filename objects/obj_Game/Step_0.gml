@@ -60,6 +60,6 @@ if(global.room_change){
 			break;
 	}
 
-	instance_create_layer(obj_Spawner.x, obj_Spawner.y,"Spawns", _to_spawn);
+	instance_create_depth(obj_Spawner.x, obj_Spawner.y,0, _to_spawn);
 
 }
