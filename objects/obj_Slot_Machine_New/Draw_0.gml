@@ -161,6 +161,9 @@ if (pay_anim) && (!spin_anim){
 					}
 				}
 			}
+			if((_poison>0)&&(instance_exists(obj_Monster_Parent)))obj_Monster_Parent.status[STATUS.POISON] += _poison;
+			if((_freeze>0)&&(instance_exists(obj_Monster_Parent)))obj_Monster_Parent.status[STATUS.FREEZE] += _freeze;
+			if((_burn>0)&&(instance_exists(obj_Monster_Parent)))obj_Monster_Parent.status[STATUS.BURN] += _burn;
 		}
 		
 		

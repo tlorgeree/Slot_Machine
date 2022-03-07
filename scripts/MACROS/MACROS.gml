@@ -12,15 +12,21 @@ enum TYPE {
 enum WEAPON {
 	SWORD = 0,
 	P_SWORD =1,
+	I_SICKLE =2,
+	F_WHIP =3,
 }
 
 enum DEFENSE {
 	SHIELD = 0,
 	P_SHIELD = 1,
+	F_SHIELD = 2,
+	B_SHIELD = 3,
 }
 enum MONEY {
 	COIN = 0,
 	P_COIN = 1,
+	F_COIN = 2,
+	B_COIN=3,
 }
 enum BLANK {
 	BASE = 0

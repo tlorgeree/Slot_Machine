@@ -16,9 +16,7 @@ if (hp <= 0){
 
 }
 if(is_turn){
-	show_debug_message("I'M ALIVE AND ABLE TO DO");
-	show_debug_message(string(acted));
-	show_debug_message(string(state));
+	if(status[STATUS.POISON]>0) show_debug_message("AAAHHHH I'm Poisoned: " +string(status[STATUS.POISON]));
 	if (!acted && state == -1){
 		damage = irandom_range(1,damage_max);
 		show_debug_message("I'm ready to attack");
@@ -28,6 +26,7 @@ if(is_turn){
 	}
 	if(acted){
 		is_turn = false;
+		status_calc = false;
 
 	}
 }

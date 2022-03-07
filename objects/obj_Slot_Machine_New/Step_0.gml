@@ -47,7 +47,7 @@ if !global.gamepaused{
 				if(reels_spun[i,1][0] != TYPE.MONEY){
 					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,1]);
 					else{
-						if (In_1D_Array(_temp,reels_spun[i,1]) == false) _valid = false;
+						if (Value_In_Array(_temp,reels_spun[i,1]) == false) _valid = false;
 					}
 				}
 			}
@@ -62,7 +62,7 @@ if !global.gamepaused{
 				if(reels_spun[i,0][0] != TYPE.MONEY){
 					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,0]);
 					else{
-						if (In_1D_Array(_temp,reels_spun[i,0]) == false) _valid = false;
+						if (Value_In_Array(_temp,reels_spun[i,0]) == false) _valid = false;
 					}
 				}
 			}
@@ -76,7 +76,7 @@ if !global.gamepaused{
 				if(reels_spun[i,2][0] != TYPE.MONEY){
 					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,2]);
 					else{
-						if (In_1D_Array(_temp,reels_spun[i,2]) == false) _valid = false;
+						if (Value_In_Array(_temp,reels_spun[i,2]) == false) _valid = false;
 					}
 				}
 			}
@@ -90,7 +90,7 @@ if !global.gamepaused{
 				if(reels_spun[i,i][0] != TYPE.MONEY){
 					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,i]);
 					else{
-						if (In_1D_Array(_temp,reels_spun[i,i]) == false) _valid = false;
+						if (Value_In_Array(_temp,reels_spun[i,i]) == false) _valid = false;
 					}
 				}
 			}
@@ -104,7 +104,7 @@ if !global.gamepaused{
 				if(reels_spun[i,2-i][0] != TYPE.MONEY){
 					if (array_length(_temp) == 0) array_push(_temp,reels_spun[i,2-i]);
 					else{
-						if (In_1D_Array(_temp,reels_spun[i,2-i]) == false) _valid = false;
+						if (Value_In_Array(_temp,reels_spun[i,2-i]) == false) _valid = false;
 					}
 				}
 			}

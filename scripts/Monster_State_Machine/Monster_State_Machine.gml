@@ -11,3 +11,17 @@ function Monster_State_Attack(){
 	acted = true;
 	state = -1;
 }
+
+function Monster_Poisoned(_int){
+	hp-=status[STATUS.POISON];
+	status[STATUS.POISON]= floor(status[STATUS.POISON]/2)
+}
+
+function Monster_Frozen(_int){
+	if(status[STATUS.FREEZE]>=hp) acted = true;
+	status[STATUS.FREEZE]= floor(status[STATUS.FREEZE]/2)
+}
+function Monster_Burned(_int){
+	hp-=status[STATUS.BURN];
+	status[STATUS.BURN]= floor(status[STATUS.BURN]/2)
+}

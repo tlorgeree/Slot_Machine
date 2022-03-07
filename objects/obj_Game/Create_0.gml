@@ -26,9 +26,9 @@ global.mon_basic_num = 2;
 global.mon_elite_num = 2;
 global.mon_boss_num = 2;
 
-global.num_weapons = 2;
-global.num_defenses = 2;
-global.num_moneys = 2;
+global.num_weapons = 4;
+global.num_defenses = 4;
+global.num_moneys = 4;
 
 global.Main_Reel_Layout[0] = [[TYPE.BLANK,BLANK.BASE],[TYPE.MONEY,MONEY.COIN],
 [TYPE.WEAPON,WEAPON.SWORD],[TYPE.DEFENSE,DEFENSE.SHIELD]];
