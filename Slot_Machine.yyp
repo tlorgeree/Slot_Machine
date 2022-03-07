@@ -78,6 +78,7 @@
     {"id":{"name":"spr_Slot_Poison_Shield","path":"sprites/spr_Slot_Poison_Shield/spr_Slot_Poison_Shield.yy",},"order":1,},
     {"id":{"name":"obj_Save_System","path":"objects/obj_Save_System/obj_Save_System.yy",},"order":4,},
     {"id":{"name":"spr_Boss_Eyes","path":"sprites/spr_Boss_Eyes/spr_Boss_Eyes.yy",},"order":4,},
+    {"id":{"name":"spr_Spiderling","path":"sprites/spr_Spiderling/spr_Spiderling.yy",},"order":8,},
     {"id":{"name":"spr_Monster_Eyes","path":"sprites/spr_Monster_Eyes/spr_Monster_Eyes.yy",},"order":0,},
     {"id":{"name":"spr_UI_Coin_5","path":"sprites/spr_UI_Coin_5/spr_UI_Coin_5.yy",},"order":3,},
     {"id":{"name":"Slot_Drawing","path":"scripts/Slot_Drawing/Slot_Drawing.yy",},"order":1,},
