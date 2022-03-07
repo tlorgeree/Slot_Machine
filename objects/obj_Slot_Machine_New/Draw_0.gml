@@ -1,22 +1,8 @@
 for (var i = 0; i<reel_num;++i){
 	
 	for (var j = 0; j<symbol_num;++j){
-		var _symbol;
+		var _symbol = Symbol_Type(reels_spun[i][j]);
 		
-		switch (reels_spun[i][j][0]) {
-			case TYPE.BLANK: switch(reels_spun[i][j][1]) {
-				case BLANK.BASE: _symbol = spr_Slot_Empty; break;
-			}break;
-			case TYPE.MONEY: switch(reels_spun[i][j][1]) {
-				case MONEY.COIN: _symbol = spr_Slot_Gold; break;
-			}break;
-			case TYPE.WEAPON: switch(reels_spun[i][j][1]) {
-				case WEAPON.SWORD: _symbol = spr_Slot_Sword; break;
-			}break;
-			case TYPE.DEFENSE: switch(reels_spun[i][j][1]) {
-				case DEFENSE.SHIELD: _symbol = spr_Slot_Shield; break;
-			}break;
-		}
 		if(spin_timer[i] == 0) Draw_Slot_Position_New(_symbol, 0, i, j);
 	}
 }
@@ -26,42 +12,56 @@ if (pay_anim) && (!spin_anim){
 	if (anim_ind<array_length(payout)){//if there are payouts, animate
 		draw_set_alpha(anim_timer/60); //flash effect
 		var _highlight = spr_Highlight_Green_New;
-		var _money = [0];//index corresponds with enum number
-		var _defense = [0];
-		var _weapon = [0];
-		
+		var _pay_calc;
+		var _money=[];//index corresponds with enum number
+		for(var m=0; m<global.num_moneys;++m){
+			_money[m] = 0;
+		}
+		var _defense = [];
+		for(var d=0; d<global.num_defenses;++d){
+			_defense[d] = 0;
+		}
+		var _weapon = [];
+		for(var w=0; w<global.num_weapons;++w){
+			_weapon[w] = 0;
+		}
+		var _poison = 0; // number of poison instances in the roll
+		var _freeze = 0;
+		var _burn = 0;
+
 		switch (payout[anim_ind,0]){ //controller for each row
 			case 1: Draw_Slot_Position_New(_highlight,0,0,1);
 					Draw_Slot_Position_New(_highlight,0,1,1);
 					Draw_Slot_Position_New(_highlight,0,2,1);
 					for (var ind = 0; ind<=2;++ind){
-						switch(reels_spun[ind,1][0]){
-							case TYPE.MONEY: switch(reels_spun[ind,1][1]){
-								case MONEY.COIN: ++_money[MONEY.COIN];break;
-							}break;							
-							case TYPE.WEAPON: switch(reels_spun[ind,1][1]){
-								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
-							}break;							
-							case TYPE.DEFENSE: switch(reels_spun[ind,1][1]){
-								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
-							}break;
+						_pay_calc = Symbol_Payout(reels_spun[ind,1],_money,_defense,_weapon,_poison,_freeze,_burn);
+						for(var pc=0; pc<array_length(_pay_calc);++pc){
+							switch (pc){
+								case 0: _money = _pay_calc[0];break;
+								case 1: _defense = _pay_calc[1];break;
+								case 2: _weapon = _pay_calc[2];break;
+								case 3: _poison = _pay_calc[3];break;
+								case 4: _freeze = _pay_calc[4];break;
+								case 5: _burn = _pay_calc[5];break;
+							}
 						}
+						
 					}
 					break;
 			case 2: Draw_Slot_Position_New(_highlight,0,0,0);
 					Draw_Slot_Position_New(_highlight,0,1,0);
 					Draw_Slot_Position_New(_highlight,0,2,0);
 					for (var ind = 0; ind<=2;++ind){
-						switch(reels_spun[ind,0][0]){
-							case TYPE.MONEY: switch(reels_spun[ind,0][1]){
-								case MONEY.COIN: ++_money[MONEY.COIN];break;
-							}break;							
-							case TYPE.WEAPON: switch(reels_spun[ind,0][1]){
-								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
-							}break;							
-							case TYPE.DEFENSE: switch(reels_spun[ind,0][1]){
-								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
-							}break;
+						_pay_calc = Symbol_Payout(reels_spun[ind,0],_money,_defense,_weapon,_poison,_freeze,_burn);
+						for(var pc=0; pc<array_length(_pay_calc);++pc){
+							switch (pc){
+								case 0: _money = _pay_calc[0];break;
+								case 1: _defense = _pay_calc[1];break;
+								case 2: _weapon = _pay_calc[2];break;
+								case 3: _poison = _pay_calc[3];break;
+								case 4: _freeze = _pay_calc[4];break;
+								case 5: _burn = _pay_calc[5];break;
+							}
 						}
 					}
 					break;
@@ -69,16 +69,16 @@ if (pay_anim) && (!spin_anim){
 					Draw_Slot_Position_New(_highlight,0,1,2);
 					Draw_Slot_Position_New(_highlight,0,2,2);
 					for (var ind = 0; ind<=2;++ind){
-						switch(reels_spun[ind,2][0]){
-							case TYPE.MONEY: switch(reels_spun[ind,2][1]){
-								case MONEY.COIN: ++_money[MONEY.COIN];break;
-							}break;							
-							case TYPE.WEAPON: switch(reels_spun[ind,2][1]){
-								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
-							}break;							
-							case TYPE.DEFENSE: switch(reels_spun[ind,2][1]){
-								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
-							}break;
+						_pay_calc = Symbol_Payout(reels_spun[ind,2],_money,_defense,_weapon,_poison,_freeze,_burn);
+						for(var pc=0; pc<array_length(_pay_calc);++pc){
+							switch (pc){
+								case 0: _money = _pay_calc[0];break;
+								case 1: _defense = _pay_calc[1];break;
+								case 2: _weapon = _pay_calc[2];break;
+								case 3: _poison = _pay_calc[3];break;
+								case 4: _freeze = _pay_calc[4];break;
+								case 5: _burn = _pay_calc[5];break;
+							}
 						}
 					}
 					break;
@@ -86,16 +86,16 @@ if (pay_anim) && (!spin_anim){
 					Draw_Slot_Position_New(_highlight,0,1,1);
 					Draw_Slot_Position_New(_highlight,0,2,2);
 					for (var ind = 0; ind<=2;++ind){
-						switch(reels_spun[ind,ind][0]){
-							case TYPE.MONEY: switch(reels_spun[ind,ind][1]){
-								case MONEY.COIN: ++_money[MONEY.COIN];break;
-							}break;							
-							case TYPE.WEAPON: switch(reels_spun[ind,ind][1]){
-								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
-							}break;							
-							case TYPE.DEFENSE: switch(reels_spun[ind,ind][1]){
-								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
-							}break;
+						_pay_calc = Symbol_Payout(reels_spun[ind,ind],_money,_defense,_weapon,_poison,_freeze,_burn);
+						for(var pc=0; pc<array_length(_pay_calc);++pc){
+							switch (pc){
+								case 0: _money = _pay_calc[0];break;
+								case 1: _defense = _pay_calc[1];break;
+								case 2: _weapon = _pay_calc[2];break;
+								case 3: _poison = _pay_calc[3];break;
+								case 4: _freeze = _pay_calc[4];break;
+								case 5: _burn = _pay_calc[5];break;
+							}
 						}
 					}
 					break;		
@@ -103,16 +103,16 @@ if (pay_anim) && (!spin_anim){
 					Draw_Slot_Position_New(_highlight,0,1,1);
 					Draw_Slot_Position_New(_highlight,0,2,0);
 					for (var ind = 0; ind<=2;++ind){
-						switch(reels_spun[ind,2-ind][0]){
-							case TYPE.MONEY: switch(reels_spun[ind,2-ind][1]){
-								case MONEY.COIN: ++_money[MONEY.COIN];break;
-							}break;							
-							case TYPE.WEAPON: switch(reels_spun[ind,2-ind][1]){
-								case WEAPON.SWORD: ++_weapon[WEAPON.SWORD];break;
-							}break;							
-							case TYPE.DEFENSE: switch(reels_spun[ind,2-ind][1]){
-								case DEFENSE.SHIELD: ++_defense[DEFENSE.SHIELD];break;
-							}break;
+						_pay_calc = Symbol_Payout(reels_spun[ind,2-ind],_money,_defense,_weapon,_poison,_freeze,_burn);
+						for(var pc=0; pc<array_length(_pay_calc);++pc){
+							switch (pc){
+								case 0: _money = _pay_calc[0];break;
+								case 1: _defense = _pay_calc[1];break;
+								case 2: _weapon = _pay_calc[2];break;
+								case 3: _poison = _pay_calc[3];break;
+								case 4: _freeze = _pay_calc[4];break;
+								case 5: _burn = _pay_calc[5];break;
+							}
 						}
 					}
 					break;		
@@ -130,6 +130,10 @@ if (pay_anim) && (!spin_anim){
 						+ (2*spin_cost*(_money[MONEY.COIN]-1)));
 						global.money += (2*spin_cost*_money[MONEY.COIN] + (spin_cost*(_money[MONEY.COIN]-1)));
 							break;
+						case MONEY.P_COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.COIN]
+						+ (2*spin_cost*(_money[MONEY.COIN]-1)));
+						global.money += (2*spin_cost*_money[MONEY.COIN] + (spin_cost*(_money[MONEY.COIN]-1)));
+							break;
 					}
 				}
 			}
@@ -139,6 +143,8 @@ if (pay_anim) && (!spin_anim){
 					switch(w){
 						case WEAPON.SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (2*(_weapon[WEAPON.SWORD]-1)));
 							break;
+						case WEAPON.P_SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (2*(_weapon[WEAPON.SWORD]-1)));
+							break;
 					}
 				}
 			}
@@ -147,6 +153,9 @@ if (pay_anim) && (!spin_anim){
 				if _defense[d]>0{
 					switch(d){
 						case DEFENSE.SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.SHIELD] + (1*(_defense[DEFENSE.SHIELD]-1)));
+							global.Defenses += global.Defense_Payout;
+							break;
+						case DEFENSE.P_SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.SHIELD] + (1*(_defense[DEFENSE.SHIELD]-1)));
 							global.Defenses += global.Defense_Payout;
 							break;
 					}
@@ -160,8 +169,6 @@ if (pay_anim) && (!spin_anim){
 			case SLOT_MODE.BATTLE: 
 				if(p_turn){
 					show_debug_message("Damage payout is: " + string(global.Damage_Payout));
-					show_debug_message("Monster hp pre-damage" + string(obj_Monster_Parent.hp))
-					show_debug_message("Monster hp pre-damage" + string(obj_Monster_Parent.hp - global.Damage_Payout))
 					obj_Monster_Parent.hp -= global.Damage_Payout;
 					obj_Monster_Parent.is_turn = true;
 					obj_Monster_Parent.acted = false;
@@ -200,38 +207,7 @@ if (spin_anim){
 			for(var k = 0; k<reel_num;++k){
 				for(var l = -1; l <reel_num;++l){
 					var _check = last_spin[k][array_length(last_spin[k])-1];
-					if l == -1{
-						switch (_check[0]) {
-							case TYPE.BLANK: switch(_check[1]) {
-								case BLANK.BASE: _symbol = spr_Slot_Empty; break;
-							}break;
-							case TYPE.MONEY: switch(_check[1]) {
-								case MONEY.COIN: _symbol = spr_Slot_Gold; break;
-							}break;
-							case TYPE.WEAPON: switch(_check[1]) {
-								case WEAPON.SWORD: _symbol = spr_Slot_Sword; break;
-							}break;
-							case TYPE.DEFENSE: switch(_check[1]) {
-								case DEFENSE.SHIELD: _symbol = spr_Slot_Shield; break;
-							}break;
-						}
-					}
-					else{
-						switch (_check[0]) {
-							case TYPE.BLANK: switch(_check[1]) {
-								case BLANK.BASE: _symbol = spr_Slot_Empty; break;
-							}break;
-							case TYPE.MONEY: switch(_check[1]) {
-								case MONEY.COIN: _symbol = spr_Slot_Gold; break;
-							}break;
-							case TYPE.WEAPON: switch(_check[1]) {
-								case WEAPON.SWORD: _symbol = spr_Slot_Sword; break;
-							}break;
-							case TYPE.DEFENSE: switch(_check[1]) {
-								case DEFENSE.SHIELD: _symbol = spr_Slot_Shield; break;
-							}break;
-						}
-					}
+					_symbol = Symbol_Type(_check);
 				}
 			}
 			displacement[i] += spin_spd[i];

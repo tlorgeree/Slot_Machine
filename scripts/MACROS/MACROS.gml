@@ -10,14 +10,17 @@ enum TYPE {
 	DEFENSE = 3
 }
 enum WEAPON {
-	SWORD = 0
+	SWORD = 0,
+	P_SWORD =1,
 }
 
 enum DEFENSE {
-	SHIELD = 0
+	SHIELD = 0,
+	P_SHIELD = 1,
 }
 enum MONEY {
-	COIN = 0
+	COIN = 0,
+	P_COIN = 1,
 }
 enum BLANK {
 	BASE = 0
@@ -58,4 +61,9 @@ enum MODE{
 	ADD = 0,
 	REMOVE = 1,
 	SWAP = 2,
+}
+enum STATUS{
+	POISON = 0,
+	FREEZE = 1,
+	BURN = 2
 }

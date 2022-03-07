@@ -37,22 +37,8 @@ if(initialized){
 					case 2: draw_sprite_ext(tile,0,_x,_y + (16*j),(3-abs(j))/3,(3-abs(j))/3,0,blend[i],1);
 						break;
 				}		
-				switch(curr_draw[0]){// Draw the symbols
-					case TYPE.BLANK: _sym = spr_Slot_Empty;
-						break;
-					case TYPE.MONEY: switch(curr_draw[1]){
-						case MONEY.COIN: _sym = spr_Slot_Gold;
-							break;
-					}break;
-					case TYPE.WEAPON: switch(curr_draw[1]){
-						case WEAPON.SWORD: _sym = spr_Slot_Sword;
-							break;
-					}break;
-					case TYPE.DEFENSE: switch(curr_draw[1]){
-						case DEFENSE.SHIELD: _sym = spr_Slot_Shield;
-							break;
-					}break;
-				}
+				_sym= Symbol_Type(curr_draw);// Draw the symbols
+				
 
 				switch(abs(j)){ //draw the tiles
 					case 0: draw_sprite_ext(_sym,0,_x,_y,(3-abs(j))/3,(3-abs(j))/3,0,blend[i],1);
@@ -127,23 +113,7 @@ if(initialized){
 				}
 				draw_sprite_ext(spr_Tile_New,0,_x + _dif,_y,1,1,0,blend[p],1);//Draw back tiles
 		
-				var _symb;
-				switch(pick[p][0]){// Draw the symbols
-					case TYPE.BLANK: _symb = spr_Slot_Empty;
-						break;
-					case TYPE.MONEY: switch(pick[p][1]){
-						case MONEY.COIN: _symb = spr_Slot_Gold;
-							break;
-					}break;
-					case TYPE.WEAPON: switch(pick[p][1]){
-						case WEAPON.SWORD: _symb = spr_Slot_Sword;
-							break;
-					}break;
-					case TYPE.DEFENSE: switch(pick[p][1]){
-						case DEFENSE.SHIELD: _symb = spr_Slot_Shield;
-							break;
-					}break;
-				}
+				var _symb=Symbol_Type(pick[p]);
 				draw_sprite_ext(_symb,0,_x+_dif,_y,1,1,0,blend[p],1);//Draw back tiles
 				draw_set_halign(fa_center);
 				draw_set_color(c_red);
