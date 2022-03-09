@@ -4,7 +4,7 @@ if(is_turn)&&(!status_calc){
 		if(status[s]>0){
 			switch(s){
 				case STATUS.POISON: Monster_Poisoned(status[STATUS.POISON]);break;
-				case STATUS.FREEZE: break;
+				case STATUS.FREEZE: Monster_Frozen(); break;
 				case STATUS.BURN: break;
 			}
 		}

@@ -171,7 +171,6 @@ if (pay_anim) && (!spin_anim){
 		switch(slot_mode){
 			case SLOT_MODE.BATTLE: 
 				if(p_turn){
-					show_debug_message("Damage payout is: " + string(global.Damage_Payout));
 					obj_Monster_Parent.hp -= global.Damage_Payout;
 					obj_Monster_Parent.is_turn = true;
 					obj_Monster_Parent.acted = false;
