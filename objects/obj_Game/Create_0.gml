@@ -1,7 +1,7 @@
 /// @desc globals
 randomise();
 display_set_gui_size(view_wport[0],view_hport[0]);
-
+draw_set_font(fnt_Default);
 global.rooms_completed = 0;
 global.meta_currency = 0;
 global.curr_room_complete = false;

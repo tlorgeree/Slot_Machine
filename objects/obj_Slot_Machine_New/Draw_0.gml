@@ -44,8 +44,7 @@ if (pay_anim) && (!spin_anim){
 								case 4: _freeze = _pay_calc[4];break;
 								case 5: _burn = _pay_calc[5];break;
 							}
-						}
-						
+						}	
 					}
 					break;
 			case 2: Draw_Slot_Position_New(_highlight,0,0,0);
@@ -127,12 +126,20 @@ if (pay_anim) && (!spin_anim){
 				if(_money[c]>0){
 					switch(c){
 						case MONEY.COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.COIN]
-						+ (2*spin_cost*(_money[MONEY.COIN]-1)));
-						global.money += (2*spin_cost*_money[MONEY.COIN] + (spin_cost*(_money[MONEY.COIN]-1)));
+							+ (2*spin_cost*(_money[MONEY.COIN]-1)));
+							global.money += (2*spin_cost*_money[MONEY.COIN] + (spin_cost*(_money[MONEY.COIN]-1)));
 							break;
-						case MONEY.P_COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.COIN]
-						+ (2*spin_cost*(_money[MONEY.COIN]-1)));
-						global.money += (2*spin_cost*_money[MONEY.COIN] + (spin_cost*(_money[MONEY.COIN]-1)));
+						case MONEY.P_COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.P_COIN]
+							+ (2*spin_cost*(_money[MONEY.P_COIN]-1)));
+							global.money += (2*spin_cost*_money[MONEY.P_COIN] + (spin_cost*(_money[MONEY.P_COIN]-1)));
+							break;
+						case MONEY.F_COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.F_COIN]
+							+ (2*spin_cost*(_money[MONEY.F_COIN]-1)));
+							global.money += (2*spin_cost*_money[MONEY.F_COIN] + (spin_cost*(_money[MONEY.F_COIN]-1)));
+							break;
+						case MONEY.B_COIN: global.Money_Payout += (3*spin_cost*_money[MONEY.B_COIN]
+							+ (2*spin_cost*(_money[MONEY.B_COIN]-1)));
+							global.money += (2*spin_cost*_money[MONEY.B_COIN] + (spin_cost*(_money[MONEY.B_COIN]-1)));
 							break;
 					}
 				}
@@ -143,7 +150,11 @@ if (pay_anim) && (!spin_anim){
 					switch(w){
 						case WEAPON.SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (2*(_weapon[WEAPON.SWORD]-1)));
 							break;
-						case WEAPON.P_SWORD: global.Damage_Payout += (1*_weapon[WEAPON.SWORD] + (2*(_weapon[WEAPON.SWORD]-1)));
+						case WEAPON.P_SWORD: global.Damage_Payout += (1*_weapon[WEAPON.P_SWORD] + (2*(_weapon[WEAPON.P_SWORD]-1)));
+							break;
+						case WEAPON.F_WHIP: global.Damage_Payout += (1*_weapon[WEAPON.F_WHIP] + (2*(_weapon[WEAPON.F_WHIP]-1)));
+							break;
+						case WEAPON.I_SICKLE: global.Damage_Payout += (1*_weapon[WEAPON.I_SICKLE] + (2*(_weapon[WEAPON.I_SICKLE]-1)));
 							break;
 					}
 				}
@@ -155,7 +166,13 @@ if (pay_anim) && (!spin_anim){
 						case DEFENSE.SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.SHIELD] + (1*(_defense[DEFENSE.SHIELD]-1)));
 							global.Defenses += global.Defense_Payout;
 							break;
-						case DEFENSE.P_SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.SHIELD] + (1*(_defense[DEFENSE.SHIELD]-1)));
+						case DEFENSE.P_SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.P_SHIELD] + (1*(_defense[DEFENSE.P_SHIELD]-1)));
+							global.Defenses += global.Defense_Payout;
+							break;
+						case DEFENSE.F_SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.F_SHIELD] + (1*(_defense[DEFENSE.F_SHIELD]-1)));
+							global.Defenses += global.Defense_Payout;
+							break;
+						case DEFENSE.B_SHIELD: global.Defense_Payout += (1*_defense[DEFENSE.B_SHIELD] + (1*(_defense[DEFENSE.B_SHIELD]-1)));
 							global.Defenses += global.Defense_Payout;
 							break;
 					}
