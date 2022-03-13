@@ -1,5 +1,6 @@
 /// @desc
 if(room == rm_Slot_Machine_New){
+	draw_set_font(fnt_Gui);
 	var _gui_w = display_get_gui_width();
 	var _gui_h = display_get_gui_height();
 	draw_text(20,20, "Money: " + string(global.money));
@@ -22,8 +23,9 @@ if(room == rm_Slot_Machine_New){
 	if(global.gamepaused){
 		draw_set_halign(fa_center);
 		draw_set_color(c_red);
-		draw_text_transformed(_gui_w/2,_gui_h/2,"PAUSED",3,3,0);
+		draw_text_transformed(_gui_w/2,_gui_h/2,"PAUSED",1,1,0);
 		draw_set_halign(fa_left);
 		draw_set_color(c_white);
 	}
+	draw_set_font(fnt_Default);
 }

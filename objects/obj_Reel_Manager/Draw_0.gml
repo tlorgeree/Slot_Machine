@@ -74,6 +74,7 @@ if(initialized){
 						_text = "Exit the shop"
 						break;
 				}
+				draw_set_font(fnt_Gui);
 				draw_sprite_ext(spr_Tile,0,_x,_y,1,1,0,blend[p],1);//Draw back tile
 				draw_sprite_ext(_sym,0,_x,_y,1,1,0,blend[p],1);//Draw back tiles
 				draw_set_halign(fa_center);
@@ -81,6 +82,7 @@ if(initialized){
 				if (p == menu_sel) draw_text(room_x,room_y/4,_text);
 				draw_set_halign(fa_left);
 				draw_set_color(c_white);
+				draw_set_font(fnt_Default);
 			}
 		}
 		else{
@@ -112,7 +114,7 @@ if(initialized){
 						break;
 				}
 				draw_sprite_ext(spr_Tile_New,0,_x + _dif,_y,1,1,0,blend[p],1);//Draw back tiles
-		
+				draw_set_font(fnt_Gui);
 				var _symb=Symbol_Type(pick[p]);
 				draw_sprite_ext(_symb,0,_x+_dif,_y,1,1,0,blend[p],1);//Draw back tiles
 				draw_set_halign(fa_center);
@@ -120,6 +122,7 @@ if(initialized){
 				if (p == pick_sel) draw_text(room_x,room_y/4,_text);
 				draw_set_halign(fa_left);
 				draw_set_color(c_white);
+				draw_set_font(fnt_Default);
 			}
 		
 		}

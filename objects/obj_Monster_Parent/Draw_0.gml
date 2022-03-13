@@ -23,11 +23,11 @@ for(var si = 0;si<_slen;++si){
 }
 #region Messages
 if (attack_message){ //Tell player they can't afford the action
-	draw_set_alpha(msg_timer/60);
+	if(msg_timer<20) draw_set_alpha(msg_timer/20);
 	draw_set_color(c_red);
 	draw_set_halign(fa_center);
 	if (msg_timer > 0){
-		draw_text_transformed(room_width/2, room_height/2, "Monster Dealt " + string(damage) + " damage!", 1,1,0);
+		draw_text_transformed(room_width/2, room_height/2, "Monster Dealt " + string(damage) + " damage!", 0.5,0.5,0);
 		if (!global.gamepaused) msg_timer--;//pause timer with pause
 	}
 	else attack_message = false;

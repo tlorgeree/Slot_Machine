@@ -276,7 +276,7 @@ draw_sprite(spr_Screen,0,screen_coordx,screen_coordy);
 
 #region Messages
 if (no_money){ //Tell player they can't afford the action
-	draw_set_alpha(msg_timer/60);
+	if(msg_timer<20) draw_set_alpha(msg_timer/20);
 	draw_set_color(c_red);
 	draw_set_halign(fa_center);
 	if (msg_timer > 0){

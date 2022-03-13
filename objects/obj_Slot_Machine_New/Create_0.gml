@@ -20,7 +20,6 @@ last_spin[2] = reels[2];
 #region Spawner
 screen_coordx = 171;
 screen_coordy = 72;
-instance_create_layer(screen_coordx,screen_coordy,"Instances",obj_Spawner);
 #endregion
 
 #region Room_Mode
