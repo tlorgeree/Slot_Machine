@@ -19,17 +19,29 @@ function Convert_Text(_string){
 	var bounds = x_width-8;
 	var output = [];
 	var temp = "";
+	
 	var s_len = string_length(_string);
 	for(var c = 1; c<=s_len;++c){
+		var word = "";
+		var i = 0;
+		while(string_char_at(_string,c+i)!=" "){
+			word+=string_char_at(_string,c+i);
+			++i;
+			show_debug_message(word);
+			if(c+i>s_len) break;
+		}
+		show_message("Current word is: " + word);
 		var next = string_char_at(_string, c);
-		if((string_width(temp)/2+string_width(next)/2)<bounds){
-			temp += next;
+		if((string_width(temp)+string_width(" " + word))<bounds){
+			if(temp == "")temp += word;
+			else temp += (" "+  word);
 			show_debug_message(temp);
 		}else{
 			array_push(output,temp);
 			temp = "";
-			temp += next;
+			temp += word;
 		}
+		c = c+i;
 	}
 	if(string_length(temp)>0) array_push(output,temp);
 	
@@ -46,6 +58,7 @@ function Draw_Dialogue_Box(_Dialogue_Arr,_x,_y,_x_width,_y_width){
 	var _x1 = _x - (_x_width/2);
 	draw_sprite_stretched(spr_Dialogue_Box,0,_x1,_y,_x_width,_y_width);
 	draw_text(_x1 +4,_y+4,_Dialogue_Arr[line_curr]);
+	if((line_curr+1)<array_length(text_conv))draw_text(_x1 +4,_y+2+string_height(_Dialogue_Arr[line_curr]),_Dialogue_Arr[line_curr+1]);
 	draw_set_font(fnt_Default);
 	
 }
