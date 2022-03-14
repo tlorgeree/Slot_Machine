@@ -55,8 +55,35 @@ function Draw_Dialogue_Box(_Dialogue_Arr,_x,_y,_x_width,_y_width){
 	draw_set_font(fnt_Text);
 	var _x1 = _x - (_x_width/2);
 	draw_sprite_stretched(spr_Dialogue_Box,0,_x1,_y,_x_width,_y_width);
-	draw_text(_x1+4,_y+4,_Dialogue_Arr[line_curr]);
-	if((line_curr+1)<array_length(text_conv))draw_text(_x1 +4,_y+3+string_height(_Dialogue_Arr[line_curr]),_Dialogue_Arr[line_curr+1]);
+	var sum_1 = 0;
+	var s_len_1 = string_length(_Dialogue_Arr[line_curr]);
+	var col_seg_1 = [col_dif[0]/s_len_1,col_dif[1]/s_len_1,col_dif[2]/s_len_1];
+	var col_curr_1;
+	for(var c = 1; c<=s_len_1;++c){
+		col_curr_1 = make_color_rgb(col1_rgb[0]+(c*col_seg_1[0]),
+			col1_rgb[1]+(c*col_seg_1[1]),col1_rgb[2]+(c*col_seg_1[2]));
+		var c_w = string_width(string_char_at(_Dialogue_Arr[line_curr],c));
+		draw_text_color(_x1+4+sum_1+random(text_shake),
+			_y+4+random(text_shake),string_char_at(_Dialogue_Arr[line_curr],c),
+			col1,col1,col2,col2,1);
+		sum_1+=c_w;
+	}
+	
+	if((line_curr+1)<array_length(text_conv)){	
+		var sum_2 = 0;
+		var s_len_2 = string_length(_Dialogue_Arr[line_curr+1]);
+		var col_seg_2 = [col_dif[0]/s_len_2,col_dif[1]/s_len_2,col_dif[2]/s_len_2];
+		var col_curr_2;
+		for(var c2 = 1; c2<=s_len_2;++c2){
+			col_curr_2 = make_color_rgb(col1_rgb[0]+(c2*col_seg_2[0]),col1_rgb[1]+(c2*col_seg_2[1]),
+				col1_rgb[2]+(c2*col_seg_2[2]));
+			var c_w2 = string_width(string_char_at(_Dialogue_Arr[line_curr+1],c2));
+			draw_text_color(_x1+4+sum_2+random(text_shake),
+				_y+4+string_height(_Dialogue_Arr[line_curr])+random(text_shake),
+				string_char_at(_Dialogue_Arr[line_curr+1],c2),col1,col1,col2,col2,1);
+			sum_2+=c_w2;
+		}
+	}
 	draw_set_font(fnt_Default);
 	
 }
