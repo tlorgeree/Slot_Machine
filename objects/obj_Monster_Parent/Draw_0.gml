@@ -21,7 +21,8 @@ for(var si = 0;si<_slen;++si){
 		draw_sprite(_spr,0,_sx + (sj*7),_sy+(si*7));
 	}
 }
-#region Messages
+
+/*#region Messages
 if (attack_message){ //Tell player they can't afford the action
 	if(msg_timer<20) draw_set_alpha(msg_timer/20);
 	draw_set_color(c_red);
@@ -36,3 +37,4 @@ if (attack_message){ //Tell player they can't afford the action
 	draw_set_alpha(1);
 }
 #endregion
+*/

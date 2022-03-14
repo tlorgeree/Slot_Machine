@@ -29,6 +29,7 @@
     {"propertyId":{"name":"hp_max","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"4+ (global.rooms_completed)","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"damage_max","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"3 + (3 * global.rooms_completed)","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"reward","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"Name","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"objectId":{"name":"obj_Monster_Parent","path":"objects/obj_Monster_Parent/obj_Monster_Parent.yy",},"value":"Elite Unblinking","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Eyeball",

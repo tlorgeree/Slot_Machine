@@ -1,14 +1,23 @@
 /// @desc Initialize Variables
 depth-=100;
-text = "Monster does a text demo. Wow.";
+text = -1;
 text_conv = -1;
-line_curr = 0;
+
 x_ori = 0;
 y_ori = 0;
 x_width = 100;
 y_width = 30;
 text_shake =0.6;
 
+line_curr = 0;
+opening = 0;
+closing = 0;
+text_timer_max = 75;
+stall = text_timer_max; //time final text lingers before closing box
+
+text_timer = [];
+displacement_max = [];
+displacement= [];
 
 //Colors
 col1_rgb = [255,215,0];

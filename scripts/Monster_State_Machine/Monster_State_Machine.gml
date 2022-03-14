@@ -10,7 +10,7 @@ function Monster_State_Attack(){
 		global.money -= _dmg_dealt;
 		global.Defenses = 0;
 	}
-	show_debug_message("Dealt " + string(_dmg_dealt) +" damage");
+	obj_Dialogue.text=(Name + " dealt " + string(_dmg_dealt) +" damage.");
 	
 	acted = true;
 	state = -1;
@@ -19,15 +19,17 @@ function Monster_State_Attack(){
 function Monster_Poisoned(){
 	hp-=status[STATUS.POISON];
 	status[STATUS.POISON]= floor(status[STATUS.POISON]/2);
+	obj_Dialogue.text=(Name + " was poisoned!");
 }
 
 function Monster_Frozen(){
 	if(status[STATUS.FREEZE]>=hp){
 		acted = true;
 		status[STATUS.FREEZE]= 0;
-		show_debug_message("I lost my turn");
+		obj_Dialogue.text=(Name + " is frozen!");
 	}
 }
 function Monster_Burned(){
 	//Moved to monster state attack
+	obj_Dialogue.text=(Name + " was burned!");
 }
