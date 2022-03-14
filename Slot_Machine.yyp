@@ -16,6 +16,7 @@
     {"id":{"name":"spr_Tile","path":"sprites/spr_Tile/spr_Tile.yy",},"order":0,},
     {"id":{"name":"Text_Boxes","path":"scripts/Text_Boxes/Text_Boxes.yy",},"order":5,},
     {"id":{"name":"spr_Room_Base","path":"sprites/spr_Room_Base/spr_Room_Base.yy",},"order":0,},
+    {"id":{"name":"fnt_Text","path":"fonts/fnt_Text/fnt_Text.yy",},"order":3,},
     {"id":{"name":"spr_Slot_Sword","path":"sprites/spr_Slot_Sword/spr_Slot_Sword.yy",},"order":0,},
     {"id":{"name":"obj_Monster_Eyeball_Boss","path":"objects/obj_Monster_Eyeball_Boss/obj_Monster_Eyeball_Boss.yy",},"order":2,},
     {"id":{"name":"spr_Dungeon_Border","path":"sprites/spr_Dungeon_Border/spr_Dungeon_Border.yy",},"order":6,},

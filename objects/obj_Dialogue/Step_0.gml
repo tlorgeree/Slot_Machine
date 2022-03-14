@@ -1,8 +1,6 @@
 /// @desc
 if((text !=-1)&&(!is_array(text_conv))){
-	draw_set_font(fnt_Dialogue);
 	text_conv = Convert_Text(text);
-	draw_set_font(fnt_Default);
 	text = -1;
 	show_debug_message(string(text_conv));
 }
